@@ -1,0 +1,31 @@
+.button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  display: block;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 124%;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: @accent;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--hover,
+  &:hover {
+    background-color: @accent-hover;
+  }
+
+  &--active,
+  &:active {
+    background-color: @accent-down;
+    color: rgba(255, 255, 255, 30%);
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}

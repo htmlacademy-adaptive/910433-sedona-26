@@ -1,3 +1,125 @@
 .reasons {
+  list-style: none;
+  position: relative;
 
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 37px;
+    width: 100%;
+    background-image: url("../../img/description-decor_0.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto;
+  }
+}
+
+.reasons__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reasons__item {
+  text-align: center;
+  padding: 26px 0 24px;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #d6d6d6;
+
+  &:first-child {
+    padding-top: 70px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.reasons__item-info {
+  padding: 0 18px;
+}
+
+.reasons__item-title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 144%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.reasons__item-number,
+.reasons__item-text {
+  margin: 0;
+  margin-bottom: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.reasons__item-number {
+  position: relative;
+  display: inline-block;
+  padding: 0 13px;
+  font-weight: 400;
+  color: #333333;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 9px;
+    width: 9px;
+    height: 1px;
+    background-color: #333333;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.reasons__item-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.reasons__item-illustrated {
+  padding-top: 33px;
+  padding-bottom: 0;
+  background-color: @accent;
+  border-bottom: 0;
+
+  .reasons__item-title {
+    color: #ffffff;
+  }
+
+  .reasons__item-number,
+  .reasons__item-text {
+    color: #ffffff;
+  }
+
+  .reasons__item-number {
+    &::before,
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+
+  .reasons__item-text {
+    margin-bottom: 40px;
+  }
 }

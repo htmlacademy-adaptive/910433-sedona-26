@@ -17,9 +17,36 @@
     left: 0;
     height: 57px;
     width: 100%;
-    background-image: url("../../img/description-decor_.png");
+    background-image: url("../../img/description-decor_1.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+  }
+}
+
+.hero--small {
+  margin-top: 56px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #42729d;
+  background-image: url("../../img/back-mobile.jpg@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 57px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    background-image: url("../../img/description-decor_1.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
     background-size: cover;
   }
 }

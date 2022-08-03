@@ -9,17 +9,38 @@
 }
 
 .main-nav__toggle {
-  display: block;
-  margin-left: auto;
+  position: absolute;
+  right: 0;
+  z-index: 5;
   padding: 0;
-  height: 58px;
-  width: 58px;
+  height: 56px;
+  width: 56px;
   border: none;
   background-color: transparent;
-  background-image: url("../img/icons/menu-burger.svg");
+  background-image: url("../../img/icons/menu-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+
+  &:hover {
+    background-image: url("../../img/icons/menu-burger-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../../img/icons/menu-burger-down.svg");
+  }
+}
+
+.main-nav__toggle--open {
+  background-image: url("../../img/icons/menu-close.svg");
+
+  &:hover {
+    background-image: url("../../img/icons/menu-close-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../../img/icons/menu-close-down.svg");
+  }
 }
 
 .main-nav__wrapper {
@@ -29,10 +50,15 @@
 
 .main-nav__lists {
   position: absolute;
-  z-index: 5;
+  display: none;
+  top: 0;
+  z-index: 3;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+
+  &--open {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .main-nav__list {
@@ -41,13 +67,32 @@
   list-style-type: none;
 }
 
+.main-nav__list:last-child {
+  .main-nav__item:last-child {
+    .main-nav__link {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 7px;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 .main-nav__item {
   padding: 0;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
 }
 
 .main-nav__link {
-  display: none;
+  display: block;
   padding: 17px 0 12px;
   background: @accent;
   color: #ffffff;
@@ -57,4 +102,13 @@
   text-align: center;
   border-bottom: 1px solid #678fa8;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.main-nav__link:hover {
+  background-color: @accent-hover;
+}
+
+.main-nav__link:active {
+  background-color: @accent-down;
+  color: fade(#ffffff, 30%);
 }

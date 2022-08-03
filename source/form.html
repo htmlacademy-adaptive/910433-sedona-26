@@ -71,11 +71,11 @@
           <h3 class="form__section-title title">Контактная информация:</h3>
           <label class="form-contacts__phone form__fieldset">
             <span class="form__input-text text">Контактный телефон*:</span>
-            <input class="form__input-field" type="text" placeholder="Введите телефон">
+            <input class="form__input-field" type="tel" placeholder="Введите телефон">
           </label>
           <label class="form-contacts__email form__fieldset">
             <span class="form__input-text text">Электронная почта*:</span>
-            <input class="form__input-field" type="text" placeholder="Введите e-mail">
+            <input class="form__input-field" type="email" placeholder="Введите e-mail">
           </label>
         </div>
       </div>
@@ -83,24 +83,24 @@
       <div class="form__section form-impression">
         <h3 class="form__section-title title">Ваше общее впечатление:</h3>
         <label class="form-impression__positive form__fieldset">
-          <div>
+          <span>
             <input class="form__input-radio" type="radio" name="impression" checked>
             <span class="form__radio-marker"></span>
-          </div>
+          </span>
           <span class="form__radio-text">Скорее положительное</span>
         </label>
         <label class="form-impression__negative form__fieldset">
-          <div>
+          <span>
             <input class="form__input-radio" type="radio" name="impression">
             <span class="form__radio-marker"></span>
-          </div>
+          </span>
           <span class="form__radio-text">Скорее отрицательное</span>
         </label>
         <label class="form-impression__unknown form__fieldset">
-          <div>
+          <span>
             <input class="form__input-radio" type="radio" name="impression">
             <span class="form__radio-marker"></span>
-          </div>
+          </span>
           <span class="form__radio-text">Затрудняюсь ответить</span>
         </label>
       </div>
@@ -108,31 +108,31 @@
       <div class="form__section form-visited">
         <h3 class="form__section-title title">Посещенные достопримечательности:</h3>
         <label class="form-visited__bridge form__fieldset">
-          <div>
+          <span>
             <input class="form__input-checkbox" type="checkbox" checked>
             <span class="form__checkbox-marker"></span>
-          </div>
+          </span>
           <span class="form__checkbox-text">Мост Дьявола</span>
         </label>
         <label class="form-visited__bell-mountain form__fieldset">
-          <div>
+          <span>
             <input class="form__input-checkbox" type="checkbox" checked>
             <span class="form__checkbox-marker"></span>
-          </div>
+          </span>
           <span class="form__checkbox-text">Гора-Колокол</span>
         </label>
         <label class="form-visited__park form__fieldset">
-          <div>
+          <span>
             <input class="form__input-checkbox" type="checkbox" checked>
             <span class="form__checkbox-marker"></span>
-          </div>
+          </span>
           <span class="form__checkbox-text">Слайд-парк</span>
         </label>
         <label class="form-visited__red-mountains form__fieldset">
-         <div>
-            <input class="form__input-checkbox" type="checkbox">
-            <span class="form__checkbox-marker"></span>
-          </div>
+          <span>
+             <input class="form__input-checkbox" type="checkbox">
+             <span class="form__checkbox-marker"></span>
+           </span>
           <span class="form__checkbox-text">Мост Дьявола</span>
         </label>
       </div>
@@ -213,6 +213,7 @@
     </div>
   </div>
 
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

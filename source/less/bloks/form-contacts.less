@@ -1,0 +1,29 @@
+.form-contacts__phone,
+.form-contacts__email {
+  padding-right: 58px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 58px;
+    height: 58px;
+    right: 0;
+    top: 20px;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form-contacts__phone {
+  &::after {
+    background-image: url("../../img/icons/phone.svg");
+  }
+}
+
+.form-contacts__email {
+  &::after {
+    background-image: url("../../img/icons/email.svg");
+  }
+}

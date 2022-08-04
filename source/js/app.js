@@ -5,4 +5,3 @@ menuButton.addEventListener('click', () => {
   menuButton.classList.toggle('main-nav__toggle--open');
   menuList.classList.toggle('main-nav__lists--open');
 });
-

@@ -17,7 +17,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: @black;
 }
 
 .main-footer__social {
@@ -25,41 +25,49 @@
 }
 
 .main-footer__developer {
-  display: flex;
-  align-items: center;
   text-decoration: none;
+}
 
-  &:hover {
-    .main-footer__developer-text {
-      color: @accent;
-    }
+.main-footer__developer:hover {
+  .main-footer__developer-text {
+    color: @accent;
+  }
+
+  .main-footer__developer-text::after {
+    background-image: url("../img/icons/htmlacademy-hover.svg");
+  }
+}
+
+.main-footer__developer:active {
+  .main-footer__developer-text {
+    color: @gray-academy;
+  }
+
+  .main-footer__developer-text::after {
+    background-image: url("../img/icons/htmlacademy-active.svg");
   }
 }
 
 .main-footer__developer-text {
-  margin-right: 12px;
+  padding-right: 39px;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
+  position: relative;
 
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.main-footer__developer-image {
-  &:hover {
-    path {
-      fill: @accent;
-    }
-  }
-
-  &:active {
-    path {
-      fill: #b3b3b3;
-    }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 34px;
+    top: -7px;
+    right: 0;
+    background-image: url("../img/icons/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

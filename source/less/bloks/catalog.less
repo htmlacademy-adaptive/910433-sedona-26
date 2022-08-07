@@ -10,7 +10,7 @@
 
 .catalog__item {
   padding: 24px 20px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @gray;
 }
 
 .catalog__link {
@@ -41,14 +41,19 @@
 }
 
 .catalog__item-button {
-  border: none;
-  background-color: transparent;
+  display: inline-block;
   cursor: pointer;
+  width: 23px;
+  height: 21px;
+  background-image: url("../img/icons/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .catalog__item-likes-number {
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
-  color: #000000;
+  color: @black;
 }

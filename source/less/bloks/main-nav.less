@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   top: 0;
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 .main-nav__toggle {
@@ -86,20 +86,20 @@
 
 .main-nav__item {
   padding: 0;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  box-shadow: 0 1px 0 rgba(@black, 0.2);
 }
 
 .main-nav__link {
   display: block;
   padding: 17px 0 12px;
   background: @accent;
-  color: #ffffff;
+  color: @white;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 1px solid #678fa8;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid @navlink-border;
+  box-shadow: 0 1px 0 rgba(@black, 0.2), inset 0 1px 0 rgba(@white, 0.2);
 }
 
 .main-nav__link:hover {
@@ -108,5 +108,5 @@
 
 .main-nav__link:active {
   background-color: @accent-down;
-  color: fade(#ffffff, 30%);
+  color: fade(@white, 30%);
 }

@@ -9,7 +9,7 @@
     left: 0;
     height: 37px;
     width: 100%;
-    background-image: url("../img/description-decor_0.png");
+    background-image: url("../img/description-decor-0.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto;
@@ -25,8 +25,8 @@
 .reasons__item {
   text-align: center;
   padding: 26px 0 24px;
-  background-color: #eeeeee;
-  border-bottom: 1px solid #d6d6d6;
+  background-color: @gray-reasons;
+  border-bottom: 1px solid @gray-active;
 
   &:first-child {
     padding-top: 70px;
@@ -49,7 +49,7 @@
   line-height: 144%;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
 }
 
 .reasons__item-number,
@@ -61,7 +61,7 @@
   line-height: 150%;
   text-align: center;
   text-transform: uppercase;
-  color: #333333;
+  color: @text;
 }
 
 .reasons__item-number {
@@ -69,7 +69,7 @@
   display: inline-block;
   padding: 0 13px;
   font-weight: 400;
-  color: #333333;
+  color: @text;
 
   &::before,
   &::after {
@@ -79,7 +79,7 @@
     top: 9px;
     width: 9px;
     height: 1px;
-    background-color: #333333;
+    background-color: @text;
   }
 
   &::before {
@@ -104,18 +104,18 @@
   border-bottom: 0;
 
   .reasons__item-title {
-    color: #ffffff;
+    color: @white;
   }
 
   .reasons__item-number,
   .reasons__item-text {
-    color: #ffffff;
+    color: @white;
   }
 
   .reasons__item-number {
     &::before,
     &::after {
-      background-color: #ffffff;
+      background-color: @white;
     }
   }
 

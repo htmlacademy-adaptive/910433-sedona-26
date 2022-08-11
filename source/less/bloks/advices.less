@@ -1,10 +1,18 @@
 .advices {
   border-bottom: 0;
+
+  @media (min-width: 768px) {
+    grid-column: span 3;
+  }
 }
 
 .advices__list {
   list-style: none;
   padding: 0 18px;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .advices__item {
@@ -14,6 +22,12 @@
   margin-bottom: 22px;
   position: relative;
 
+  @media (min-width: 768px) {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 100px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -21,6 +35,14 @@
     height: 40px;
     top: 0;
     left: 0;
+
+    @media (min-width: 768px) {
+      width: 75px;
+      height: 75px;
+      top: 0;
+      left: 50%;
+      margin-left: -37.5px;
+    }
   }
 
   &:nth-child(1) {

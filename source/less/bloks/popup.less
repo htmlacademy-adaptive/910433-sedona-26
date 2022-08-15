@@ -6,6 +6,7 @@
   display: block;
   text-align: center;
   background-color: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 
   @media @tablet-screen {
     max-width: 400px;
@@ -17,8 +18,22 @@
   padding: 45px 42px 35px;
 }
 
+.popup__title {
+  br {
+    display: none;
+
+    @media @tablet-screen {
+      display: block;
+    }
+  }
+}
+
 .popup__text {
   padding-bottom: 28px;
+}
+
+.popup__text--success {
+  max-width: 444px;
 }
 
 .popup__button-box {

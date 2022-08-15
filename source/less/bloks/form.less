@@ -1,12 +1,16 @@
 .form {
-  padding: 36px 0;
+  padding: 36px 0 0;
+
+  @media @tablet-screen {
+    padding: 102px 0;
+  }
 }
 
 .form__wrapper {
   max-width: 960px;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media @tablet-screen {
     padding: 0 15px;
     display: flex;
     flex-wrap: wrap;
@@ -17,24 +21,70 @@
   border-top: 1px solid @gray;
   padding: 24px 20px 39px;
 
-  @media (min-width: 768px) {
+  @media @tablet-screen {
     width: 100%;
     border-top: none;
-    padding: 24px 0 39px;
+    padding: 63px 0 0;
   }
 }
 
 .form__section:nth-child(1),
 .form__section:nth-child(2) {
   @media @tablet-screen {
+    padding-top: 0;
     flex-grow: 1;
     width: 43%;
+
+    .form__section-title {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 
 .form__section-title {
   text-align: center;
+
+  @media @tablet-screen {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 123px;
+      height: 1px;
+      top: 50%;
+      background-color: @gray-form-stroke;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  @media @desktop-screen {
+    &::before,
+    &::after {
+      width: 280px;
+    }
+  }
+
+  br {
+    display: none;
+
+    @media @tablet-screen {
+      display: block;
+    }
+  }
 }
+
 
 .form__fieldset {
   display: block;
@@ -158,7 +208,7 @@
 }
 
 .form__button-box {
-  padding: 0 20px;
+  text-align: right;
 
   @media @tablet-screen {
     display: flex;
@@ -177,7 +227,6 @@
 
 .form__legend {
   display: inline-block;
-  margin-bottom: 24px;
   font-weight: 400;
   font-size: 12px;
   line-height: 175%;

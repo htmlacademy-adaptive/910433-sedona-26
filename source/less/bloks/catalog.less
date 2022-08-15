@@ -6,21 +6,51 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media @tablet-screen {
+    display: flex;
+    flex-wrap: wrap;
+    // max-width: 960px;
+  }
 }
 
 .catalog__item {
   padding: 24px 20px;
   border-top: 1px solid @gray;
+
+  @media @tablet-screen {
+    padding: 0;
+    border-top: none;
+    width: 50%;
+  }
+}
+
+.catalog__item:first-child {
+  width: 100%;
 }
 
 .catalog__link {
   display: block;
   margin-bottom: 15px;
+
+  @media @tablet-screen {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__item-image {
   width: 100%;
   height: auto;
+}
+
+.catalog__item-info {
+  @media @tablet-screen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+    background-color: @gray-fields;
+  }
 }
 
 .catalog__item-text-box {

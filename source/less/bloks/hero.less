@@ -11,7 +11,7 @@
   background-size: cover;
   position: relative;
 
-  @media (min-width: 768px) {
+  @media @tablet-screen {
     height: 518px;
   }
 
@@ -44,6 +44,7 @@
 
   @media @tablet-screen {
     height: 290px;
+    background-image: url("../img/hero-catalog-desktop.jpg");
   }
 
   &::after {
@@ -53,9 +54,10 @@
     width: 100%;
     bottom: -1px;
     left: 0;
-    background-image: url("../img/description-decor-1.png");
+    // background-image: url("../img/description-decor-1.png");
+    background-image: url("../../img/icons/hero-triangle.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-size: cover;
+    background-size: contain;
   }
 }

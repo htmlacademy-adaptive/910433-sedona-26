@@ -5,15 +5,39 @@
 
   @media @tablet-screen {
     border-top: none;
-    padding: 17px 15px 0;
+    padding: 58px 15px 0;
   }
 }
 
 .video__titie,
 .video__text {
   padding: 0 20px;
+  display: block;
+
+  @media @tablet-screen {
+    max-width: 445px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.video__titie {
+  @media @tablet-screen {
+    margin-bottom: 26px;
+  }
 }
 
 .video__player {
   margin-top: 38px;
+
+  @media @tablet-screen {
+    margin-top: 71px;
+    margin-bottom: 40px;
+    height: 500px;
+  }
+
+  @media @desktop-screen {
+    max-width: 800px;
+    margin: 80px auto 120px;
+  }
 }

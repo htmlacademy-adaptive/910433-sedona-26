@@ -6,9 +6,19 @@
     margin: 0 auto;
   }
 
+  @media @desktop-screen {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
   .form__fieldset {
     @media @tablet-screen {
+      margin-bottom: 0;
       width: 50%;
+    }
+
+    @media @desktop-screen {
+      width: auto;
     }
   }
 }

@@ -1,6 +1,10 @@
 .interest {
   text-align: center;
   padding: 40px 0 50px;
+
+  @media @tablet-screen {
+    padding: 61px 0 58px;
+  }
 }
 
 .interest__wrapper {
@@ -12,12 +16,17 @@
   margin: 0 auto;
   max-width: 260px;
   margin-bottom: 26px;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 124%;
-  text-align: center;
-  text-transform: uppercase;
+  // font-weight: 700;
+  // font-size: 21px;
+  // line-height: 124%;
+  // text-align: center;
+  // text-transform: uppercase;
   color: @black;
+
+  @media @tablet-screen {
+    font-size: 30px;
+    line-height: 87%;
+  }
 }
 
 .interest__text {
@@ -30,4 +39,19 @@
   text-align: center;
   text-transform: uppercase;
   color: @text;
+
+  br {
+    display: none;
+  }
+
+  @media @tablet-screen {
+    max-width: 435px;
+  }
+}
+
+.interest__link {
+  @media @tablet-screen {
+    width: 458px;
+    margin: 0 auto;
+  }
 }

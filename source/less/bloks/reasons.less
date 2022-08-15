@@ -14,7 +14,7 @@
     background-position: center top;
     background-size: auto;
 
-    @media (min-width: 768px) {
+    @media @tablet-screen {
       display: none;
     }
   }
@@ -25,7 +25,7 @@
   padding: 0;
   list-style: none;
 
-  @media (min-width: 768px) {
+  @media @tablet-screen {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 256px 330px 256px 256px;
@@ -35,34 +35,78 @@
 .reasons__item {
   text-align: center;
   padding: 26px 0 24px;
-  background-color: @gray-reasons;
   border-bottom: 1px solid @gray-active;
+  background-color: @gray-reasons;
+
+  br {
+    display: none;
+  }
+
+  @media @tablet-screen {
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    padding: 42px 0;
+
+    br {
+      display: block;
+    }
+  }
 
   &:first-child {
     padding-top: 70px;
 
-    @media (min-width: 768px) {
+    @media @tablet-screen {
       padding-top: 0;
+    }
+  }
+
+  &:nth-child(4) {
+    @media @tablet-screen {
+      .reasons__item-text {
+        max-width: 190px;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    @media @tablet-screen {
+      .reasons__item-text {
+        max-width: 157px;
+      }
     }
   }
 
   &:last-child {
     border-bottom: none;
+
+    @media @tablet-screen {
+      .reasons__item-text {
+        max-width: 175px;
+      }
+    }
   }
 }
 
 .reasons__item-info {
   padding: 0 18px;
+
+  @media @tablet-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .reasons__item-title {
   margin: 0;
   margin-bottom: 11px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 144%;
-  text-align: center;
-  text-transform: uppercase;
+  // font-weight: 700;
+  // font-size: 18px;
+  // line-height: 144%;
+  // text-align: center;
+  // text-transform: uppercase;
   color: @black;
 }
 
@@ -117,7 +161,7 @@
   background-color: @accent;
   border-bottom: 0;
 
-  @media (min-width: 768px) {
+  @media @tablet-screen {
     display: flex;
     grid-column: span 3;
     padding-top: 0;
@@ -125,6 +169,21 @@
     &:nth-child(3) {
       display: flex;
       flex-direction: row-reverse;
+    }
+  }
+
+  .reasons__item-image {
+    @media @tablet-screen {
+      box-sizing: border-box;
+      width: 66.67%;
+    }
+  }
+
+  .reasons__item-info {
+    @media @tablet-screen {
+      box-sizing: border-box;
+      width: 33.33%;
+      padding: 40px 32px 44px;
     }
   }
 
@@ -146,10 +205,9 @@
 
   .reasons__item-text {
     margin-bottom: 40px;
+
+    @media @tablet-screen {
+      margin-bottom: 0;
+    }
   }
 }
-
-.reasons__item-illustrated:first-child {
-
-}
-

@@ -6,6 +6,11 @@
   display: block;
   text-align: center;
   background-color: @white;
+
+  @media @tablet-screen {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .popup__wrapper {
@@ -22,6 +27,10 @@
 }
 
 .popup--success {
+  @media @tablet-screen {
+    max-width: 640px;
+  }
+
   .popup__text {
     padding-bottom: 0;
   }

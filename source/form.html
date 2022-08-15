@@ -48,9 +48,13 @@
         <h2 class="page-subject__title title">Оставьте свой отзыв</h2>
         <p class="page-subject__text text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
+      </div>
     </section>
+
     <form class="form" action="#" method="GET">
-      <div class="form__section form-inroduction">
+      <div class="form__wrapper">
+
+        <div class="form__section form-inroduction">
         <h3 class="form__section-title title">Представьтесь:</h3>
         <label class="form-inroduction__first-name form__fieldset">
           <span class="form__input-text text">Имя*:</span>
@@ -64,8 +68,9 @@
           <span class="form__input-text text">Отчество:</span>
           <input class="form__input-field" type="text" placeholder="Петрович">
         </label>
-      </div>
-      <div class="form__section form-contacts">
+        </div>
+
+        <div class="form__section form-contacts">
         <h3 class="form__section-title title">Контактная информация:</h3>
         <label class="form-contacts__phone form__fieldset">
           <span class="form__input-text text">Контактный телефон*:</span>
@@ -75,10 +80,11 @@
           <span class="form__input-text text">Электронная почта*:</span>
           <input class="form__input-field" type="email" placeholder="Введите e-mail">
         </label>
-      </div>
+        </div>
 
-      <div class="form__section form-impression">
+        <div class="form__section form-impression">
         <h3 class="form__section-title title">Ваше общее впечатление:</h3>
+        <div class="form-impression__buttons-wrapper">
         <label class="form-impression__positive form__fieldset">
           <input class="form__input-radio" type="radio" name="impression" checked>
           <span class="form__radio-text">Скорее положительное</span>
@@ -91,26 +97,29 @@
           <input class="form__input-radio" type="radio" name="impression">
           <span class="form__radio-text">Затрудняюсь ответить</span>
         </label>
-      </div>
+        </div>
+        </div>
 
       <div class="form__section form-visited">
         <h3 class="form__section-title title">Посещенные достопримечательности:</h3>
-        <label class="form-visited__bridge form__fieldset">
-          <input class="form__input-checkbox" type="checkbox" checked>
-          <span class="form__checkbox-text">Мост Дьявола</span>
-        </label>
-        <label class="form-visited__bell-mountain form__fieldset">
-          <input class="form__input-checkbox" type="checkbox" checked>
-          <span class="form__checkbox-text">Гора-Колокол</span>
-        </label>
-        <label class="form-visited__park form__fieldset">
-          <input class="form__input-checkbox" type="checkbox" checked>
-          <span class="form__checkbox-text">Слайд-парк</span>
-        </label>
-        <label class="form-visited__red-mountains form__fieldset">
-          <input class="form__input-checkbox" type="checkbox" >
-          <span class="form__checkbox-text">Красные скалы</span>
-        </label>
+        <div class="form-visited__buttons-wrapper">
+          <label class="form-visited__bridge form__fieldset">
+            <input class="form__input-checkbox" type="checkbox" checked>
+            <span class="form__checkbox-text">Мост Дьявола</span>
+          </label>
+          <label class="form-visited__bell-mountain form__fieldset">
+            <input class="form__input-checkbox" type="checkbox" checked>
+            <span class="form__checkbox-text">Гора-Колокол</span>
+          </label>
+          <label class="form-visited__park form__fieldset">
+            <input class="form__input-checkbox" type="checkbox" checked>
+            <span class="form__checkbox-text">Слайд-парк</span>
+          </label>
+          <label class="form-visited__red-mountains form__fieldset">
+            <input class="form__input-checkbox" type="checkbox" >
+            <span class="form__checkbox-text">Красные скалы</span>
+          </label>
+        </div>
       </div>
 
       <div class="form__section form-emotions">
@@ -120,23 +129,25 @@
 
       <div class="form__button-box">
         <button class="form__button button" type="submit">Отправить отзыв</button>
-        <small class="form__legeng">* — обязательные поля</small>
+        <small class="form__legend">* — обязательные поля</small>
       </div>
     </form>
   </main>
 
   <footer class="main-footer">
     <div class="main-footer__wrapper">
-      <a class="main-footer__hashtag" href="#">#visitsedona</a>
-      <div class="main-footer__social social">
-        <h2 class="visually-hidden">Мы в социальных сетях:</h2>
-        <a class="social__link social--vk" href="https://vk.com/htmlacademy" aria-label="vk"></a>
-        <a class="social__link social--telegram" href="https://t.me/htmlacademy" aria-label="telegram"></a>
-        <a class="social__link social--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="youtube"></a>
+      <div class="main-footer__content">
+        <a class="main-footer__hashtag" href="#">#visitsedona</a>
+        <div class="main-footer__social social">
+          <h2 class="visually-hidden">Мы в социальных сетях:</h2>
+          <a class="social__link social--vk" href="https://vk.com/htmlacademy" aria-label="vk"></a>
+          <a class="social__link social--telegram" href="https://t.me/htmlacademy" aria-label="telegram"></a>
+          <a class="social__link social--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="youtube"></a>
+        </div>
+        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <span class="main-footer__developer-text">Разработано</span>
+        </a>
       </div>
-      <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-        <span class="main-footer__developer-text">Разработано</span>
-      </a>
     </div>
   </footer>
 

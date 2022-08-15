@@ -1,5 +1,9 @@
 .form-emotions {
   margin-bottom: 17px;
+
+  @media @tablet-screen {
+    padding: 0;
+  }
 }
 
 .form-emotions__textarea {
@@ -14,6 +18,8 @@
   line-height: 144%;
   border: none;
   resize: none;
+
+
 
   &::placeholder {
     color: rgba(@black, 0.3);

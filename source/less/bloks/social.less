@@ -12,6 +12,56 @@
   height: 48px;
   background-color: @accent;
   cursor: pointer;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.social__link.social--vk {
+  &::before {
+    background-image: url("../img/icons/vk.svg");
+  }
+}
+
+.social__link.social--vk:active {
+  &::before {
+    background-image: url("../img/icons/vk-active.svg");
+  }
+}
+
+.social__link.social--telegram {
+  &::before {
+    background-image: url("../img/icons/telegram.svg");
+  }
+}
+
+.social__link.social--telegram:active {
+  &::before {
+    background-image: url("../img/icons/telegram-active.svg");
+  }
+}
+
+.social__link.social--youtube {
+  &::before {
+    background-image: url("../img/icons/youtube.svg");
+  }
+}
+
+.social__link.social--youtube:active {
+  &::before {
+    background-image: url("../img/icons/youtube-active.svg");
+  }
 }
 
 .social__link:last-child {
@@ -24,10 +74,4 @@
 
 .social__link:active {
   background-color: @accent-down;
-
-  .social__image {
-    path {
-      fill: rgba(255, 255, 255, 0.3);
-    }
-  }
 }

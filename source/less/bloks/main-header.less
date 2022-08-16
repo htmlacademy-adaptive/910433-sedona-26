@@ -1,7 +1,9 @@
 .main-header {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
-  background-color: #dceaf3;
-  color: #000000;
+  background-color: @hero-bg;
+  color: @black;
 }
 
 .main-header__logo {
@@ -10,4 +12,8 @@
   top: 0;
   left: 50%;
   margin-left: -94px;
+
+  @media (min-width: 768px) {
+    z-index: 5;
+  }
 }

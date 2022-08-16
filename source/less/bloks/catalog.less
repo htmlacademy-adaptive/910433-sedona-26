@@ -1,26 +1,94 @@
 .catalog {
   padding-top: 25px;
+
+  @media @tablet-screen {
+    padding-top: 90px;
+  }
+}
+
+.catalog__wrapper {
+  @media @tablet-screen {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media @tablet-screen {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__item {
   padding: 24px 20px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @gray;
+
+  @media @tablet-screen {
+    padding: 0;
+    border-top: none;
+    width: 50%;
+  }
+
+  @media @desktop-screen {
+    width: 33.33%;
+    position: relative;
+  }
+}
+
+.catalog__item:first-child {
+  @media @tablet-screen {
+    width: 100%;
+  }
+
+  .catalog__link {
+    @media @tablet-screen {
+      height: 400px;
+    }
+
+    .catalog__item-image {
+      @media @tablet-screen {
+        height: 400px;
+      }
+    }
+  }
 }
 
 .catalog__link {
   display: block;
   margin-bottom: 15px;
+
+  @media @tablet-screen {
+    margin-bottom: 0;
+  }
 }
 
 .catalog__item-image {
   width: 100%;
   height: auto;
+}
+
+.catalog__item-info {
+  @media @tablet-screen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+    background-color: @gray-fields;
+  }
+
+  @media @desktop-screen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(@black, 0.3);
+  }
 }
 
 .catalog__item-text-box {
@@ -30,6 +98,10 @@
 .catalog__item-title {
   font-size: 14px;
   margin-bottom: 0;
+
+  @media @desktop-screen {
+    color: @white;
+  }
 }
 
 .catalog__item-author {
@@ -38,17 +110,34 @@
   font-size: 14px;
   line-height: 150%;
   color: #333333;
+
+  @media @desktop-screen {
+    color: @white;
+  }
 }
 
 .catalog__item-button {
-  border: none;
-  background-color: transparent;
+  display: inline-block;
   cursor: pointer;
+  width: 23px;
+  height: 21px;
+  background-image: url("../img/icons/like.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media @desktop-screen {
+    background-image: url("../img/icons/like-white.svg");
+  }
 }
 
 .catalog__item-likes-number {
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
-  color: #000000;
+  color: @black;
+
+  @media @desktop-screen {
+    color: @white;
+  }
 }

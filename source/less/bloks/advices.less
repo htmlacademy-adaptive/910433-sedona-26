@@ -1,10 +1,24 @@
 .advices {
   border-bottom: 0;
+  background-color: @white;
+
+  @media @tablet-screen {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .advices__list {
   list-style: none;
   padding: 0 18px;
+
+  @media @tablet-screen {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .advices__item {
@@ -14,6 +28,14 @@
   margin-bottom: 22px;
   position: relative;
 
+  @media @tablet-screen {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 100px;
+    width: 33.33%;
+    align-content: center;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -21,11 +43,27 @@
     height: 40px;
     top: 0;
     left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media @tablet-screen {
+      width: 75px;
+      height: 75px;
+      top: 0;
+      left: 50%;
+      margin-left: -37.5px;
+    }
   }
 
   &:nth-child(1) {
     &::before {
       background-image: url("../img/icons/house.svg");
+    }
+
+    @media @tablet-screen {
+      &::before {
+        background-image: url("../img/icons/house-big.svg");
+      }
     }
   }
 
@@ -33,13 +71,26 @@
     &::before {
       background-image: url("../img/icons/burger.svg");
     }
+
+    @media @tablet-screen {
+      &::before {
+        background-image: url("../img/icons/burger-big.svg");
+      }
+    }
   }
 
   &:last-child {
+    margin-bottom: 0;
+
     &::before {
       background-image: url("../img/icons/present.svg");
     }
-    margin-bottom: 0;
+
+    @media @tablet-screen {
+      &::before {
+        background-image: url("../img/icons/present-big.svg");
+      }
+    }
   }
 }
 
@@ -50,7 +101,12 @@
   font-size: 18px;
   line-height: 144%;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
+
+  @media @tablet-screen {
+    max-width: 185px;
+    margin: 0 auto 16px;
+  }
 }
 
 .advices__item-text {
@@ -59,5 +115,10 @@
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
-  color: #333333;
+  color: @text;
+
+  @media @tablet-screen {
+    max-width: 193px;
+    margin: 0 auto;
+  }
 }

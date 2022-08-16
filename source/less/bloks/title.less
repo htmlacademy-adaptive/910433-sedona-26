@@ -5,5 +5,18 @@
   font-size: 18px;
   line-height: 144%;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
+
+  @media @tablet-screen {
+    font-size: 21px;
+    line-height: 124%;
+    margin-bottom: 28px;
+  }
+
+  &--big {
+    @media @tablet-screen {
+      font-size: 30px;
+      line-height: 87%;
+    }
+  }
 }

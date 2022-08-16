@@ -5,23 +5,47 @@
   // margin-top: -140px;
   display: block;
   text-align: center;
-  background-color: #ffffff;
+  background-color: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @media @tablet-screen {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .popup__wrapper {
   padding: 45px 42px 35px;
 }
 
+.popup__title {
+  br {
+    display: none;
+
+    @media @tablet-screen {
+      display: block;
+    }
+  }
+}
+
 .popup__text {
   padding-bottom: 28px;
 }
 
+.popup__text--success {
+  max-width: 444px;
+}
+
 .popup__button-box {
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: @gray-fields;
 }
 
 .popup--success {
+  @media @tablet-screen {
+    max-width: 640px;
+  }
+
   .popup__text {
     padding-bottom: 0;
   }

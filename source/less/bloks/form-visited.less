@@ -1,0 +1,23 @@
+.form-visited__buttons-wrapper {
+  @media @tablet-screen {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-screen {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .form__fieldset {
+    @media @tablet-screen {
+      width: 50%;
+    }
+
+    @media @desktop-screen {
+      width: auto;
+    }
+  }
+}

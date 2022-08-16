@@ -1,14 +1,43 @@
 .video {
   padding: 17px 20px 0;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @gray;
+
+  @media @tablet-screen {
+    border-top: none;
+    padding: 58px 15px 0;
+  }
 }
 
 .video__titie,
 .video__text {
   padding: 0 20px;
+  display: block;
+
+  @media @tablet-screen {
+    max-width: 445px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.video__titie {
+  @media @tablet-screen {
+    margin-bottom: 26px;
+  }
 }
 
 .video__player {
   margin-top: 38px;
+
+  @media @tablet-screen {
+    margin-top: 71px;
+    margin-bottom: 40px;
+    height: 500px;
+  }
+
+  @media @desktop-screen {
+    max-width: 800px;
+    margin: 80px auto 120px;
+  }
 }

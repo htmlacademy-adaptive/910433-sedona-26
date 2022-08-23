@@ -58,11 +58,11 @@
         <h3 class="form__section-title title">Представьтесь:</h3>
         <label class="form-inroduction__first-name form__fieldset">
           <span class="form__input-text text">Имя*:</span>
-          <input class="form__input-field" type="text" placeholder="Пётр">
+          <input class="form__input-field form__input-field-required" type="text" placeholder="Пётр">
         </label>
         <label class="form-inroduction__second-name form__fieldset">
           <span class="form__input-text text">Фамилия*:</span>
-          <input class="form__input-field" type="text" placeholder="Петров">
+          <input class="form__input-field form__input-field-required" type="text" placeholder="Петров">
         </label>
         <label class="form-inroduction__third-name form__fieldset">
           <span class="form__input-text text">Отчество:</span>
@@ -74,11 +74,11 @@
         <h3 class="form__section-title title">Контактная информация:</h3>
         <label class="form-contacts__phone form__fieldset">
           <span class="form__input-text text">Контактный телефон*:</span>
-          <input class="form__input-field" type="tel" placeholder="Введите телефон">
+          <input class="form__input-field form__input-field-required" type="tel" placeholder="Введите телефон">
         </label>
         <label class="form-contacts__email form__fieldset">
           <span class="form__input-text text">Электронная почта*:</span>
-          <input class="form__input-field" type="email" placeholder="Введите e-mail">
+          <input class="form__input-field form__input-field-required" type="email" placeholder="Введите e-mail">
         </label>
         </div>
 
@@ -156,26 +156,26 @@
 
   <!-- Модальные окна -->
 
-  <!-- Ошибка -->
-  <div class="overlay">
-    <div class="popup popup--error">
-      <div class="popup__wrapper">
-        <h3 class="popup__title title title--big">Что-то пошло<br> не так!</h3>
-        <p class="popup__text popup__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="popup__button button" type="button">OK</button>
-      </div>
-    </div>
-  </div>
-
   <!-- Отзыв отправлен -->
-  <div class="overlay">
-    <div class="popup popup--success">
+  <div class="overlay" id="overlaySuccess">
+    <div class="popup popup--success" id="popupWindowSuccess">
       <div class="popup__wrapper">
         <h3 class="popup__title title title--big">Ваш отзыв отправлен!</h3>
         <p class="popup__text popup__text--success text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="popup__button-box">
-        <button class="popup__button button" type="button">закрыть окно</button>
+        <button class="popup__button button" type="button" id="popupButtonSuccess">закрыть окно</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ошибка -->
+  <div class="overlay" id="overlayError">
+    <div class="popup popup--error" id="popupWindowError">
+      <div class="popup__wrapper">
+        <h3 class="popup__title title title--big">Что-то пошло<br> не так!</h3>
+        <p class="popup__text popup__text text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="popup__button button" type="button" id="popupButtonError">OK</button>
       </div>
     </div>
   </div>

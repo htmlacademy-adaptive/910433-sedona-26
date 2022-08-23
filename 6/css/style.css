@@ -1344,7 +1344,12 @@
   .catalog__wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1280px) {
+  .catalog__wrapper {
+    padding: 0;
   }
 }
 .catalog__list {
@@ -1480,7 +1485,12 @@
 @media (min-width: 768px) {
   .video {
     border-top: none;
-    padding: 58px 15px 0;
+    padding: 58px 60px 0;
+  }
+}
+@media (min-width: 1280px) {
+  .video {
+    padding: 58px 0 0;
   }
 }
 .video__titie,

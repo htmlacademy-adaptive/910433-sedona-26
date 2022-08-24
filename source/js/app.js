@@ -2,7 +2,9 @@ const pageBodyClass = document.querySelector('.page-body');
 
 //элементы меню
 const menuButton = document.querySelector('.main-nav__toggle');
+const menu = document.querySelector('.main-nav');
 const menuList = document.querySelector('.main-nav__lists');
+
 
 //элементы формы
 const submitFormButton= document.querySelector('.form__button');
@@ -22,6 +24,9 @@ const overlayError = document.querySelector('#overlayError');
 const popupButtonSuccess = document.querySelector('#popupButtonSuccess');
 const popupWindowSuccess = document.querySelector('#popupWindowSuccess');
 const overlaySuccess = document.querySelector('#overlaySuccess');
+
+//отображение меню, если не подгрузился JS
+menu.classList.remove('main-nav--no-js');
 
 // открытие меню
 menuButton.addEventListener('click', () => {

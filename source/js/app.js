@@ -5,8 +5,8 @@ const menuButton = document.querySelector('.main-nav__toggle');
 const menu = document.querySelector('.main-nav');
 const menuList = document.querySelector('.main-nav__lists');
 
-
 //элементы формы
+const form = document.querySelector('.form');
 const submitFormButton= document.querySelector('.form__button');
 const firstNameField = document.querySelector('#firstName');
 const secondNameField = document.querySelector('#secondName');
@@ -25,6 +25,16 @@ const popupButtonSuccess = document.querySelector('#popupButtonSuccess');
 const popupWindowSuccess = document.querySelector('#popupWindowSuccess');
 const overlaySuccess = document.querySelector('#overlaySuccess');
 
+//функция очистки полей формы
+const clearFields = () => {
+  firstNameField.value = '';
+  secondNameField.value = '';
+  thirdNameField.value = '';
+  phoneField.value = '';
+  emailField.value = '';
+  textareaField.value = '';
+}
+
 //отображение меню, если не подгрузился JS
 menu.classList.remove('main-nav--no-js');
 
@@ -35,15 +45,17 @@ menuButton.addEventListener('click', () => {
 });
 
 // открытие модальных окон
-submitFormButton.addEventListener('click', () => {
+// submitFormButton.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   if (!firstNameField.value || !secondNameField.value || !phoneField.value || !emailField.value) {
     popupWindowError.classList.add('popup--open');
     overlayError.classList.add('overlay--open');
-    pageBodyClass.style.overflow = 'hidden';
+    pageBodyClass.classList.add('page-body--no-scroll');
   } else {
     popupWindowSuccess.classList.add('popup--open');
     overlaySuccess.classList.add('overlay--open');
-    pageBodyClass.style.overflow = 'hidden';
+    pageBodyClass.classList.add('page-body--no-scroll');
   }
 });
 
@@ -52,23 +64,13 @@ submitFormButton.addEventListener('click', () => {
 popupButtonError.addEventListener('click', () => {
   popupWindowError.classList.remove('popup--open');
   overlayError.classList.remove('overlay--open');
-  pageBodyClass.style.overflow = 'visible';
+  pageBodyClass.classList.remove('page-body--no-scroll');
 });
 
 // закрытие модального окна УСПЕХ
 popupButtonSuccess.addEventListener('click', () => {
   popupWindowSuccess.classList.remove('popup--open');
   overlaySuccess.classList.remove('overlay--open');
-  pageBodyClass.style.overflow = 'visible';
+  pageBodyClass.classList.remove('page-body--no-scroll');
   clearFields();
 });
-
-//функция очистки полей формы
-function clearFields() {
-  firstNameField.value = '';
-  secondNameField.value = '';
-  thirdNameField.value = '';
-  phoneField.value = '';
-  emailField.value = '';
-  textareaField.value = '';
-}

@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Седона - Каталог</title>
   <base href="https://htmlacademy-adaptive.github.io/910433-sedona-26/6/">
 </head>
@@ -56,7 +60,11 @@
         <ul class="catalog__list">
         <li class="catalog__item">
           <a class="catalog__link" href="#">
-            <img class="catalog__item-image" src="./img/photo-1.jpg" width="280" height="280" alt="Неродные просторы">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-1-desktop@1x.jpg 1x, ./img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-1-tablet@1x.jpg 1x, ./img/photo-1-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="./img/photo-1-mobile@1x.jpg" srcset="./img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
+            </picture>
           </a>
           <div class="catalog__item-info">
             <div class="catalog__item-text-box">
@@ -71,7 +79,11 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__link" href="#">
-            <img class="catalog__item-image" src="./img/photo-2.jpg" width="280" height="280" alt="Местная растительность">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-2-desktop@1x.jpg 1x, ./img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-2-tablet@1x.jpg 1x, ./img/photo-2-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="./img/photo-2-mobile@1x.jpg" srcset="./img/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Местная растительность">
+            </picture>
           </a>
           <div class="catalog__item-info">
             <div class="catalog__item-text-box">
@@ -86,7 +98,11 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__link" href="#">
-            <img class="catalog__item-image" src="./img/photo-3.jpg" width="280" height="280" alt="Дорога на север">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-3-desktop@1x.jpg 1x, ./img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-3-tablet@1x.jpg 1x, ./img/photo-3-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="./img/photo-3-mobile@1x.jpg" srcset="./img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на север">
+            </picture>
           </a>
           <div class="catalog__item-info">
             <div class="catalog__item-text-box">
@@ -101,7 +117,11 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__link" href="#">
-            <img class="catalog__item-image" src="./img/photo-4.jpg" width="280" height="280" alt="Мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-4-desktop@1x.jpg 1x, ./img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-4-tablet@1x.jpg 1x, ./img/photo-4-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="./img/photo-4-mobile@1x.jpg" srcset="./img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
+            </picture>
           </a>
           <div class="catalog__item-info">
             <div class="catalog__item-text-box">

@@ -88,6 +88,10 @@
   }
 }
 
+.reasons__picture-box {
+  flex-grow: 1;
+}
+
 .reasons__item-info {
   padding: 0 18px;
 
@@ -175,7 +179,9 @@
   .reasons__item-image {
     @media @tablet-screen {
       box-sizing: border-box;
-      width: 66.67%;
+      // width: 66.67%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -184,6 +190,10 @@
       box-sizing: border-box;
       width: 33.33%;
       padding: 40px 32px 44px;
+    }
+
+    @media @desktop-screen {
+      padding: 47px 53px;
     }
   }
 

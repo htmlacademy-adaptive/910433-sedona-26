@@ -1,13 +1,14 @@
 .main-footer {
-  padding: 29px 0 23px;
+  padding: 33px 0 0;
 }
 
 .main-footer__wrapper {
-  max-width: 960px;
+  // max-width: 960px;
   margin: 0 auto;
 
   @media @tablet-screen {
-    padding: 0 15px;
+    max-width: 650px;
+    // padding: 0 15px;
   }
 }
 
@@ -43,11 +44,16 @@
 
   @media @tablet-screen {
     margin-bottom: 0;
+    margin-left: -2px;
   }
 }
 
 .main-footer__developer {
   text-decoration: none;
+
+  @media @tablet-screen {
+    margin-right: -4px;
+  }
 }
 
 .main-footer__developer:hover {
@@ -72,6 +78,7 @@
 }
 
 .main-footer__developer-text {
+  margin-right: 4px;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;

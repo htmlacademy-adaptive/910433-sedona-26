@@ -126,13 +126,15 @@
   cursor: pointer;
   width: 23px;
   height: 21px;
-  background-image: url("../img/icons/like.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.catalog__like-icon {
+  width: 22px;
+  height: 20px;
+  fill: rgba(@black, 0.3);
 
   @media @desktop-screen {
-    background-image: url("../img/icons/like-white.svg");
+    fill: @white;
   }
 }
 

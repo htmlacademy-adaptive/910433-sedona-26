@@ -51,27 +51,27 @@
 }
 
 .main-footer__developer:hover {
-  .main-footer__developer-text {
+  .main-footer__developer-text,
+  .main-footer__developer-icon {
     color: @accent;
-  }
-
-  .main-footer__developer-text::after {
-    background-image: url("../img/icons/htmlacademy-hover.svg");
   }
 }
 
 .main-footer__developer:active {
-  .main-footer__developer-text {
+  .main-footer__developer-text,
+  .main-footer__developer-icon {
     color: @gray-academy;
-  }
-
-  .main-footer__developer-text::after {
-    background-image: url("../img/icons/htmlacademy-active.svg");
   }
 }
 
+.main-footer__developer-icon {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  color: @black;
+}
+
 .main-footer__developer-text {
-  padding-right: 39px;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -79,17 +79,4 @@
   text-transform: uppercase;
   color: @black;
   position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 27px;
-    height: 34px;
-    top: -7px;
-    right: 0;
-    background-image: url("../img/icons/htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
 }

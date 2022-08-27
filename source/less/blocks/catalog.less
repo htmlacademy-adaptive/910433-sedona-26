@@ -1,9 +1,9 @@
 .catalog {
-  padding-top: 25px;
+  padding-top: 36px;
   background-color: @white;
 
   @media @tablet-screen {
-    padding-top: 90px;
+    padding-top: 88px;
   }
 }
 
@@ -31,7 +31,7 @@
 }
 
 .catalog__item {
-  padding: 24px 20px;
+  padding: 24px 20px 25px;
   border-top: 1px solid @gray;
 
   @media @tablet-screen {
@@ -82,9 +82,9 @@
 .catalog__item-info {
   @media @tablet-screen {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 22px 20px 15px;
+    padding: 24px 20px 5px;
     background-color: @gray-fields;
   }
 
@@ -103,7 +103,7 @@
 
 .catalog__item-title {
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 2px;
 
   @media @desktop-screen {
     color: @white;
@@ -127,6 +127,12 @@
   cursor: pointer;
   width: 23px;
   height: 21px;
+  margin-right: 10px;
+
+  @media @tablet-screen {
+    margin-top: 4px;
+    margin-right: 4px;
+  }
 }
 
 .catalog__like-icon {

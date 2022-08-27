@@ -1,13 +1,13 @@
 .page-subject {
-  padding-top: 36px;
+  padding-top: 24px;
   background-color: @white;
 
   @media @tablet-screen {
-    padding-top: 62px;
+    padding-top: 59px;
   }
 
   @media @desktop-screen {
-    padding-top: 115px;
+    padding-top: 99px;
   }
 }
 
@@ -16,4 +16,21 @@
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+}
+
+.page-subject__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 144%;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+  @media @tablet-screen {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 87%;
+    text-transform: uppercase;
+  }
 }

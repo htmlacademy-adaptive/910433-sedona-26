@@ -1,11 +1,11 @@
 .video-player {
   @media @tablet-screen {
-    margin: 36px auto 0;
-    padding-bottom: 76px;
+    // margin: 36px auto 0;
+    padding-bottom: 48px;
   }
 
   @media @desktop-screen {
-    padding-bottom: 87px;
+    padding-bottom: 91px;
   }
 }
 
@@ -44,10 +44,15 @@
 }
 
 .video-player__button {
+  margin-left: 15px;
   border: none;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
   width: 48px;
   height: 54px;
+
+  @media @tablet-screen {
+    margin-left: 0;
+  }
 }

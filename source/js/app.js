@@ -46,31 +46,36 @@ menuButton.addEventListener('click', () => {
 
 // открытие модальных окон
 // submitFormButton.addEventListener('click', () => {
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (!firstNameField.value || !secondNameField.value || !phoneField.value || !emailField.value) {
-    popupWindowError.classList.add('popup--open');
-    overlayError.classList.add('overlay--open');
-    pageBodyClass.classList.add('page-body--no-scroll');
-  } else {
-    popupWindowSuccess.classList.add('popup--open');
-    overlaySuccess.classList.add('overlay--open');
-    pageBodyClass.classList.add('page-body--no-scroll');
-  }
-});
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!firstNameField.value || !secondNameField.value || !phoneField.value || !emailField.value) {
+      popupWindowError.classList.add('popup--open');
+      overlayError.classList.add('overlay--open');
+      pageBodyClass.classList.add('page-body--no-scroll');
+      popupButtonError.focus();
+    } else {
+      popupWindowSuccess.classList.add('popup--open');
+      overlaySuccess.classList.add('overlay--open');
+      pageBodyClass.classList.add('page-body--no-scroll');
+      popupButtonSuccess.focus();
+    }
+  });
 
-// закрытие модальных окон
-// закрытие модального окна ОШИБКА
-popupButtonError.addEventListener('click', () => {
-  popupWindowError.classList.remove('popup--open');
-  overlayError.classList.remove('overlay--open');
-  pageBodyClass.classList.remove('page-body--no-scroll');
-});
+  // закрытие модальных окон
+  // закрытие модального окна ОШИБКА
+  popupButtonError.addEventListener('click', () => {
+    popupWindowError.classList.remove('popup--open');
+    overlayError.classList.remove('overlay--open');
+    pageBodyClass.classList.remove('page-body--no-scroll');
+  });
 
-// закрытие модального окна УСПЕХ
-popupButtonSuccess.addEventListener('click', () => {
-  popupWindowSuccess.classList.remove('popup--open');
-  overlaySuccess.classList.remove('overlay--open');
-  pageBodyClass.classList.remove('page-body--no-scroll');
-  clearFields();
-});
+  // закрытие модального окна УСПЕХ
+  popupButtonSuccess.addEventListener('click', () => {
+    popupWindowSuccess.classList.remove('popup--open');
+    overlaySuccess.classList.remove('overlay--open');
+    pageBodyClass.classList.remove('page-body--no-scroll');
+    clearFields();
+  });
+}
+

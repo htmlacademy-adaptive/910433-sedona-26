@@ -1,5 +1,6 @@
 .form {
   padding: 36px 0 0;
+  background-color: @white;
 
   @media @tablet-screen {
     padding: 102px 0;
@@ -181,6 +182,12 @@
   background-position: center;
 }
 
+.form__input-radio:disabled + .form__radio-text::before {
+  background-image: url("../img/icons/radio-disabled.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .form__input-radio:focus + .form__radio-text::before {
   background-color: @gray;
 }
@@ -198,6 +205,12 @@
 
 .form__input-checkbox:checked + .form__checkbox-text::before {
   background-image: url("../img/icons/checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__input-checkbox:disabled + .form__checkbox-text::before {
+  background-image: url("../img/icons/checkbox-disabled.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

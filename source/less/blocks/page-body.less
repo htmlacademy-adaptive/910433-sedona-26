@@ -1,12 +1,16 @@
 .page-body {
-  margin: 0 auto;
-  padding: 0;
-  background-color: @white;
-  max-width: 1200px;
+  margin: 0;
+  background-color: @page-bg;
 
   &--no-scroll {
     overflow-y: hidden;
   }
+}
+
+.page-body__wrapper {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
 
   @media @desktop-screen {
     box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);

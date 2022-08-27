@@ -1,5 +1,5 @@
 .page-subject {
-  padding-top: 24px;
+  padding-top: 37px;
   background-color: @white;
 
   @media @tablet-screen {
@@ -11,6 +11,16 @@
   }
 }
 
+.page-subject__form {
+  @media @tablet-screen {
+    padding-top: 61px;
+  }
+
+  @media @desktop-screen {
+    padding-top: 115px;
+  }
+}
+
 .page-subject__wrapper {
   max-width: 435px;
   margin: 0 auto;
@@ -18,7 +28,7 @@
   text-align: center;
 }
 
-.page-subject__title {
+.page-subject__wrapper .page-subject__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 144%;
@@ -27,10 +37,14 @@
 
   @media @tablet-screen {
     margin: 0;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     font-weight: 700;
     font-size: 30px;
     line-height: 87%;
     text-transform: uppercase;
+  }
+
+  @media @desktop-screen {
+    margin-bottom: 31px;
   }
 }

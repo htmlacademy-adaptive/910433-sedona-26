@@ -14,9 +14,12 @@
 </head>
 
 <body class="page-body">
-  <header class="main-header">
+  <div class="page-body__wrapper">
+    <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="./img/logo.svg" width="185" height="96" alt="Город Седона">
+      <svg class="main-header__logo-image" width="185" height="96" alt="Город Седона">
+        <use xlink:href="./img/sprite.svg#logo"></use>
+      </svg>
     </a>
     <nav class="main-nav main-nav--no-js">
       <button class="main-nav__toggle">
@@ -45,35 +48,35 @@
     </nav>
     <div class="hero hero--small">
       <h1 class="visually-hidden">СЕДОНА — городок в Аризоне</h1>
-      <img class="form-hero__image" src="./img/header-text-short-mobile.svg" width="229" height="39" alt="Добро пожаловать в Седону!">
+      <svg class="hero__image--small" width="229" height="39" alt="Добро пожаловать в Седону!">
+        <use xlink:href="./img/sprite.svg#heroImageSmall"></use>
+      </svg>
     </div>
-  </header>
-  <main>
-    <section class="page-subject">
+    </header>
+    <main>
+    <section class="page-subject page-subject__form">
       <div class="page-subject__wrapper">
         <h2 class="page-subject__title title title--big">Оставьте свой отзыв</h2>
         <p class="page-subject__text text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </div>
       </div>
     </section>
 
     <form class="form" action="#" method="GET">
       <div class="form__wrapper">
-
         <div class="form__section form-inroduction">
-        <h3 class="form__section-title title">Представьтесь:</h3>
-        <label class="form-inroduction__first-name form__fieldset">
-          <span class="form__input-text text">Имя*:</span>
-          <input class="form__input-field" id="firstName" type="text" placeholder="Пётр">
-        </label>
-        <label class="form-inroduction__second-name form__fieldset">
-          <span class="form__input-text text">Фамилия*:</span>
-          <input class="form__input-field" id="secondName" type="text" placeholder="Петров">
-        </label>
-        <label class="form-inroduction__third-name form__fieldset">
-          <span class="form__input-text text">Отчество:</span>
-          <input class="form__input-field" id="thirdName" type="text" placeholder="Петрович">
-        </label>
+          <h3 class="form__section-title title">Представьтесь:</h3>
+          <label class="form-inroduction__first-name form__fieldset">
+            <span class="form__input-text text">Имя*:</span>
+            <input class="form__input-field" id="firstName" type="text" placeholder="Пётр">
+          </label>
+          <label class="form-inroduction__second-name form__fieldset">
+            <span class="form__input-text text">Фамилия*:</span>
+            <input class="form__input-field" id="secondName" type="text" placeholder="Петров">
+          </label>
+          <label class="form-inroduction__third-name form__fieldset">
+            <span class="form__input-text text">Отчество:</span>
+            <input class="form__input-field" id="thirdName" type="text" placeholder="Петрович">
+          </label>
         </div>
 
         <div class="form__section form-contacts">
@@ -100,11 +103,11 @@
           <span class="form__radio-text">Скорее отрицательное</span>
         </label>
         <label class="form-impression__unknown form__fieldset">
-          <input class="form__input-radio" type="radio" name="impression">
+          <input class="form__input-radio" type="radio" name="impression" disabled>
           <span class="form__radio-text">Затрудняюсь ответить</span>
         </label>
         </div>
-        </div>
+      </div>
 
       <div class="form__section form-visited">
         <h3 class="form__section-title title">Посещенные<br> достопримечательности:</h3>
@@ -122,7 +125,7 @@
             <span class="form__checkbox-text">Слайд-парк</span>
           </label>
           <label class="form-visited__red-mountains form__fieldset">
-            <input class="form__input-checkbox" type="checkbox" >
+            <input class="form__input-checkbox" type="checkbox" disabled>
             <span class="form__checkbox-text">Красные скалы</span>
           </label>
         </div>
@@ -138,41 +141,40 @@
           </div>
         </div>
       </div>
-
     </form>
-  </main>
-
-  <footer class="main-footer">
-    <div class="main-footer__wrapper">
-      <div class="main-footer__content">
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__content">
         <a class="main-footer__hashtag" href="#">#visitsedona</a>
         <div class="main-footer__social social">
           <h2 class="visually-hidden">Мы в социальных сетях:</h2>
           <a class="social__link social--vk" href="https://vk.com/htmlacademy" aria-label="vk">
-            <svg class="social__vk-icon">
+            <svg class="social__vk-icon" width="24" height="24" alt="наша страница в ВКонтакте">
               <use xlink:href="./img/sprite.svg#vk"></use>
             </svg>
           </a>
           <a class="social__link social--telegram" href="https://t.me/htmlacademy" aria-label="telegram">
-            <svg class="social__telegram-icon">
+            <svg class="social__telegram-icon" width="24" height="24" alt="наш канал в telegram">
               <use xlink:href="./img/sprite.svg#telegram"></use>
             </svg>
           </a>
           <a class="social__link social--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="youtube">
-            <svg class="social__youtube-icon">
+            <svg class="social__youtube-icon" width="24" height="24" alt="наш канал на youtube">
               <use xlink:href="./img/sprite.svg#youtube"></use>
             </svg>
           </a>
         </div>
-        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="наша страница в интернете">
           <span class="main-footer__developer-text">Разработано</span>
-          <svg class="main-footer__developer-icon">
+          <svg class="main-footer__developer-icon" width="36" height="36" alt="HTML Academy">
             <use xlink:href="./img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
 
   <!-- Модальные окна -->

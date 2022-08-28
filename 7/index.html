@@ -14,9 +14,12 @@
 </head>
 
 <body class="page-body">
-  <header class="main-header">
+  <div class="page-body__wrapper">
+    <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="./img/logo.svg" width="185" height="96" alt="Город Седона">
+      <svg class="main-header__logo-image" width="185" height="96" alt="Город Седона">
+        <use xlink:href="./img/sprite.svg#logo"></use>
+      </svg>
     </a>
     <nav class="main-nav main-nav--no-js">
       <button class="main-nav__toggle ">
@@ -45,13 +48,12 @@
     </nav>
     <div class="hero">
       <h1 class="visually-hidden">СЕДОНА — городок в Аризоне</h1>
-      <picture>
-        <source media="(min-width: 768px)" srcset="./img/header-text-index-tablet.svg">
-        <img class="hero__image" src="./img/header-text-mobile.svg" width="282" height="214" alt="Добро пожаловать в Седону!">
-      </picture>
+      <svg class="hero__image" width="282" height="214" alt="Добро пожаловать в Седону!">
+        <use xlink:href="./img/sprite.svg#heroImage"></use>
+      </svg>
     </div>
-  </header>
-  <main class="main-container">
+    </header>
+    <main class="main-container">
     <section class="description">
       <h2 class="description__title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="description__text text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -142,40 +144,40 @@
     <section class="map">
       <h3 class="visually-hidden">Контакты</h3>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15847.771218321583!2d-111.78907729784412!3d34.8733361376179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1659454891255!5m2!1sru!2sru" width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <!-- <img class="map__image" src="./img/map-mobile.jpg" width="320" height="350" alt="Контакты: США, штат Аризона, город Седона"> -->
     </section>
-  </main>
-  <footer class="main-footer">
+    </main>
+    <footer class="main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__content">
         <a class="main-footer__hashtag" href="#">#visitsedona</a>
         <div class="main-footer__social social">
           <h2 class="visually-hidden">Мы в социальных сетях:</h2>
           <a class="social__link social--vk" href="https://vk.com/htmlacademy" aria-label="vk">
-            <svg class="social__vk-icon">
+            <svg class="social__vk-icon" width="24" height="24" alt="наша страница в ВКонтакте">
               <use xlink:href="./img/sprite.svg#vk"></use>
             </svg>
           </a>
           <a class="social__link social--telegram" href="https://t.me/htmlacademy" aria-label="telegram">
-            <svg class="social__telegram-icon">
+            <svg class="social__telegram-icon" width="24" height="24" alt="наш канал в telegram">
               <use xlink:href="./img/sprite.svg#telegram"></use>
             </svg>
           </a>
           <a class="social__link social--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="youtube">
-            <svg class="social__youtube-icon">
+            <svg class="social__youtube-icon" width="24" height="24" alt="наш канал на youtube">
               <use xlink:href="./img/sprite.svg#youtube"></use>
             </svg>
           </a>
         </div>
-        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="наша страница в интернете">
           <span class="main-footer__developer-text">Разработано</span>
-          <svg class="main-footer__developer-icon">
+          <svg class="main-footer__developer-icon" width="36" height="36" alt="HTML Academy">
             <use xlink:href="./img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
-  </footer>
+    </footer>
+  </div>
   <script src="./js/app.js"></script>
 </body>
 

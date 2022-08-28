@@ -1,6 +1,6 @@
 .hero {
   margin-top: 56px;
-  height: 389px;
+  height: 388px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,12 +16,17 @@
   }
 
   @media @tablet-screen {
+    margin-top: 0;
     height: 518px;
     background-image: url("../img/back-desktop@2x.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
     }
+  }
+
+  @media @desktop-screen {
+    height: 517px;
   }
 
   &::after {
@@ -103,12 +108,16 @@
 }
 
 .hero__image {
-  margin-top: 8px;
+  margin-top: 5px;
 
   @media @tablet-screen {
-    margin-top: -8px;
+    margin-top: -14px;
     width: 461px;
     height: 350px;
+  }
+
+  @media @desktop-screen {
+    margin-top: -13px;
   }
 
   &--small {

@@ -35,7 +35,6 @@
 .reasons__item {
   text-align: center;
   padding: 26px 0 0;
-  // border-bottom: 1px solid @gray-active;
   background-color: @gray-reasons;
 
   &:nth-child(3) {
@@ -90,7 +89,10 @@
   }
 
   &:last-child {
-    border-bottom: none;
+
+    .reasons__item-text {
+      border-bottom: none;
+    }
 
     @media @tablet-screen {
       .reasons__item-text {

@@ -78,4 +78,3 @@ if (form) {
     clearFields();
   });
 }
-

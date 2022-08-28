@@ -1,0 +1,149 @@
+.advices {
+  border-bottom: 0;
+  background-color: @white;
+
+  @media @tablet-screen {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.advices__list {
+  list-style: none;
+  padding: 0 18px 52px;
+
+  @media @tablet-screen {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media @desktop-screen {
+    margin-top: -20px;
+  }
+}
+
+.advices__item {
+  text-align: left;
+  padding-left: 47px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+  position: relative;
+
+  @media @tablet-screen {
+    text-align: center;
+    padding-top: 97px;
+    margin-bottom: 0;
+    width: 33.33%;
+    align-content: center;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: -3px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media @tablet-screen {
+      width: 75px;
+      height: 75px;
+      top: -3px;
+      left: 50%;
+      margin-left: -37.5px;
+    }
+  }
+
+  &:nth-child(1) {
+    padding-left: 47px;
+
+    &::before {
+      background-image: url("../img/icons/house.svg");
+    }
+
+    @media @tablet-screen {
+      padding-left: 0;
+
+      &::before {
+        background-image: url("../img/icons/house-big.svg");
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    padding-left: 52px;
+
+    &::before {
+      background-image: url("../img/icons/burger.svg");
+    }
+
+    @media @tablet-screen {
+      padding-left: 0;
+
+      &::before {
+        background-image: url("../img/icons/burger-big.svg");
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-left: 45px;
+
+    &::before {
+      background-image: url("../img/icons/present.svg");
+    }
+
+    @media @tablet-screen {
+      padding-left: 0;
+
+      &::before {
+        background-image: url("../img/icons/present-big.svg");
+      }
+    }
+  }
+}
+
+.advices__item-title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 144%;
+  text-transform: uppercase;
+  color: @black;
+
+  @media @tablet-screen {
+    max-width: 185px;
+    margin: 0 auto 23px;
+    font-size: 21px;
+    line-height: 124%;
+  }
+
+  @media @desktop-screen {
+    margin: 0 auto 23px;
+  }
+}
+
+.advices__item-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: @text;
+
+  @media @tablet-screen {
+    max-width: 193px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-screen {
+    max-width: 300px;
+  }
+}

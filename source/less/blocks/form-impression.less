@@ -1,0 +1,60 @@
+.form-impression {
+  padding-top: 28px;
+  padding-bottom: 24px;
+
+  @media @tablet-screen {
+    padding-top: 68px;
+  }
+
+  @media @desktop-screen {
+    padding-top: 74px;
+  }
+
+  .form__section-title {
+    margin-bottom: 20px;
+    margin-top: -3px;
+
+    @media @tablet-screen {
+      margin-bottom: 28px;
+    }
+
+    @media @desktop-screen {
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.form-impression__buttons-wrapper {
+  @media @tablet-screen {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 575px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-screen {
+    max-width: 100%;
+    margin: 0 53px;
+    justify-content: space-between;
+  }
+
+  .form__fieldset {
+    @media @tablet-screen {
+      width: 47%;
+    }
+
+    @media @desktop-screen {
+      width: auto;
+    }
+  }
+
+  .form__fieldset:nth-child(2n) {
+    @media @tablet-screen {
+      margin-left: 25px;
+    }
+
+    @media @desktop-screen {
+      margin-left: 0;
+    }
+  }
+}

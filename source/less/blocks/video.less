@@ -1,0 +1,51 @@
+.video {
+  padding: 16px 20px 0;
+  text-align: center;
+  border-top: 1px solid @gray;
+  background-color: @white;
+
+  @media @tablet-screen {
+    border-top: none;
+    padding: 55px 60px 0;
+  }
+
+  @media @desktop-screen {
+    padding: 60px 0 0;
+  }
+}
+
+.video__titie,
+.video__text {
+  padding: 0 20px;
+  display: block;
+
+  @media @tablet-screen {
+    max-width: 445px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.video__titie {
+  margin-bottom: 28px;
+
+  @media @tablet-screen {
+    margin-bottom: 26px;
+    font-size: 30px;
+  }
+}
+
+.video__player {
+  margin-top: 38px;
+
+  @media @tablet-screen {
+    margin-top: 84px;
+    // padding: 71px auto 40px;
+    height: 500px;
+    max-width: 800px;
+  }
+
+  @media @desktop-screen {
+    margin: 83px auto 0;
+  }
+}

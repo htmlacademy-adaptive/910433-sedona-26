@@ -1,0 +1,157 @@
+.catalog {
+  padding-top: 36px;
+  background-color: @white;
+
+  @media @tablet-screen {
+    padding-top: 88px;
+  }
+}
+
+.catalog__wrapper {
+  @media @tablet-screen {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  @media @desktop-screen {
+    padding: 0;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media @tablet-screen {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__item {
+  padding: 24px 20px 25px;
+  border-top: 1px solid @gray;
+
+  @media @tablet-screen {
+    padding: 0;
+    border-top: none;
+    width: 50%;
+  }
+
+  @media @desktop-screen {
+    width: 33.33%;
+    position: relative;
+  }
+}
+
+.catalog__item:first-child {
+  @media @tablet-screen {
+    width: 100%;
+  }
+
+  .catalog__link {
+    @media @tablet-screen {
+      height: 400px;
+    }
+
+    .catalog__item-image {
+      @media @tablet-screen {
+        height: 400px;
+      }
+    }
+  }
+}
+
+.catalog__link {
+  display: block;
+  margin-bottom: 15px;
+
+  @media @tablet-screen {
+    margin-bottom: 0;
+  }
+}
+
+.catalog__item-image {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.catalog__item-info {
+  @media @tablet-screen {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 20px 5px;
+    background-color: @gray-fields;
+  }
+
+  @media @desktop-screen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(@black, 0.3);
+  }
+}
+
+.catalog__item-text-box {
+  margin-bottom: 11px;
+}
+
+.catalog__item-title {
+  font-size: 14px;
+  margin-bottom: 2px;
+
+  @media @desktop-screen {
+    color: @white;
+  }
+}
+
+.catalog__item-author {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #333333;
+
+  @media @desktop-screen {
+    color: @white;
+  }
+}
+
+.catalog__item-button {
+  display: inline-block;
+  cursor: pointer;
+  width: 23px;
+  height: 21px;
+  margin-right: 10px;
+
+  @media @tablet-screen {
+    margin-top: 4px;
+    margin-right: 4px;
+  }
+}
+
+.catalog__like-icon {
+  width: 22px;
+  height: 20px;
+  fill: rgba(@black, 0.3);
+
+  @media @desktop-screen {
+    fill: @white;
+  }
+}
+
+.catalog__item-likes-number {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: @black;
+
+  @media @desktop-screen {
+    color: @white;
+  }
+}

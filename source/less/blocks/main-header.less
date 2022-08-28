@@ -1,0 +1,23 @@
+.main-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: @hero-bg;
+  color: @black;
+}
+
+.main-header__logo {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  margin-left: -93px;
+
+  @media (min-width: 768px) {
+    z-index: 5;
+  }
+}
+
+.main-header__logo-image {
+  vertical-align: top;
+}

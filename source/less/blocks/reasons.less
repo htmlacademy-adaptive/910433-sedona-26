@@ -1,0 +1,274 @@
+.reasons {
+  list-style: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 37px;
+    width: 100%;
+    background-image: url("../img/description-decor-0.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto;
+
+    @media @tablet-screen {
+      display: none;
+    }
+  }
+}
+
+.reasons__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media @tablet-screen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 256px 330px 256px 256px;
+  }
+}
+
+.reasons__item {
+  text-align: center;
+  padding: 26px 0 0;
+  background-color: @gray-reasons;
+
+  &:nth-child(3) {
+    .reasons__item-text {
+      margin-bottom: 12px;
+    }
+
+    .reasons__item-title {
+      @media @tablet-screen {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  br {
+    display: none;
+  }
+
+  @media @tablet-screen {
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    padding: 42px 0;
+
+    br {
+      display: block;
+    }
+  }
+
+  &:first-child {
+    padding-top: 70px;
+
+    @media @tablet-screen {
+      padding-top: 0;
+    }
+  }
+
+  &:nth-child(4) {
+    @media @tablet-screen {
+      .reasons__item-text {
+        max-width: 190px;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    @media @tablet-screen {
+      .reasons__item-text {
+        max-width: 157px;
+      }
+    }
+  }
+
+  &:last-child {
+    .reasons__item-text {
+      border-bottom: none;
+    }
+
+    @media @tablet-screen {
+      .reasons__item-text {
+        max-width: 175px;
+      }
+    }
+  }
+}
+
+.reasons__picture-box {
+  flex-grow: 1;
+}
+
+.reasons__item-info {
+  padding: 0 35px;
+
+  @media @tablet-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @media @desktop-screen {
+    width: 300px;
+  }
+}
+
+.reasons__item-title {
+  margin: 0;
+  margin-bottom: 11px;
+  color: @black;
+
+  @media @tablet-screen {
+    margin-bottom: 15px;
+  }
+}
+
+.reasons__item-number,
+.reasons__item-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: @text;
+}
+
+.reasons__item-number {
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  padding: 0 13px;
+  font-weight: 400;
+  color: @text;
+
+  @media @tablet-screen {
+    margin-bottom: 22px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 9px;
+    width: 9px;
+    height: 1px;
+    background-color: @text;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.reasons__item-text {
+  padding-bottom: 24px;
+  border-bottom: 1px solid @gray-active;
+
+  @media @tablet-screen {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  @media @desktop-screen {
+    min-width: 300px;
+  }
+}
+
+.reasons__item-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.reasons__item-illustrated {
+  padding-top: 38px;
+  padding-bottom: 0;
+  background-color: @accent;
+  border-bottom: 0;
+
+  @media @tablet-screen {
+    display: flex;
+    grid-column: span 3;
+    padding-top: 0;
+
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .reasons__item-image {
+    @media @tablet-screen {
+      box-sizing: border-box;
+      // width: 66.67%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .reasons__item-info {
+    padding: 0 18px;
+
+    @media @tablet-screen {
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      width: 33.33%;
+      padding: 40px 32px 44px;
+    }
+
+    @media @desktop-screen {
+      padding: 47px 65px;
+    }
+  }
+
+  .reasons__item-title {
+    color: @white;
+
+    @media @tablet-screen {
+      margin-bottom: 13px;
+    }
+  }
+
+  .reasons__item-number,
+  .reasons__item-text {
+    color: @white;
+
+    @media @desktop-screen {
+      margin-bottom: 13px;
+    }
+  }
+
+  .reasons__item-number {
+    @media @tablet-screen {
+      margin-bottom: 22px;
+    }
+
+    &::before,
+    &::after {
+      background-color: @white;
+    }
+  }
+
+  .reasons__item-text {
+    margin-bottom: 17px;
+    border: none;
+
+    @media @tablet-screen {
+      margin-bottom: 0;
+    }
+  }
+}

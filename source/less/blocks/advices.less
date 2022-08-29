@@ -48,7 +48,7 @@
     top: -3px;
     left: 0;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: cover;
 
     @media @tablet-screen {
       width: 75px;
@@ -63,15 +63,15 @@
     padding-left: 47px;
 
     &::before {
-      background-image: url("../img/icons/house.svg");
+      background-image: url("../img/house.svg");
     }
 
     @media @tablet-screen {
       padding-left: 0;
 
-      &::before {
-        background-image: url("../img/icons/house-big.svg");
-      }
+      // &::before {
+      //   background-image: url("../img/icons/house-big.svg");
+      // }
     }
   }
 
@@ -79,15 +79,15 @@
     padding-left: 52px;
 
     &::before {
-      background-image: url("../img/icons/burger.svg");
+      background-image: url("../img/burger.svg");
     }
 
     @media @tablet-screen {
       padding-left: 0;
 
-      &::before {
-        background-image: url("../img/icons/burger-big.svg");
-      }
+      // &::before {
+      //   background-image: url("../img/icons/burger-big.svg");
+      // }
     }
   }
 
@@ -96,15 +96,16 @@
     padding-left: 45px;
 
     &::before {
-      background-image: url("../img/icons/present.svg");
+      background-image: url("../img/present.svg");
+      background-size: cover;
     }
 
     @media @tablet-screen {
       padding-left: 0;
 
-      &::before {
-        background-image: url("../img/icons/present-big.svg");
-      }
+      // &::before {
+      //   background-image: url("../img/icons/present-big.svg");
+      // }
     }
   }
 }

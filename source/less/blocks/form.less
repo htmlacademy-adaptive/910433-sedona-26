@@ -40,13 +40,6 @@
     padding-top: 0;
     flex-grow: 1;
     width: 43%;
-
-    .form__section-title {
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
   }
 }
 
@@ -105,23 +98,19 @@
   }
 }
 
+.form__section:nth-child(1) .form__section-title,
+.form__section:nth-child(2) .form__section-title {
+  @media @tablet-screen {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .form__fieldset {
   display: block;
   margin-bottom: 16px;
-
-  &:hover {
-    .form__radio-marker,
-    .form__checkbox-marker {
-      background-color: @gray;
-    }
-  }
-
-  &:active {
-    .form__radio-marker,
-    .form__checkbox-marker {
-      background-color: @gray-active;
-    }
-  }
 }
 
 .form__fieldset:last-child {
@@ -236,6 +225,16 @@
 
 .form__input-checkbox:focus + .form__checkbox-text::before {
   background-color: @gray;
+}
+
+.form__fieldset:hover .form__radio-text::before,
+.form__fieldset:hover .form__checkbox-text::before {
+  background-color: @gray;
+}
+
+.form__fieldset:hover .form__input-radio:disabled + .form__radio-text::before,
+.form__fieldset:hover .form__input-checkbox:disabled + .form__checkbox-text::before {
+  background-color: @gray-fields;
 }
 
 .form__button-box {

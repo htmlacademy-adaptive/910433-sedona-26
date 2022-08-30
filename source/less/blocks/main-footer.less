@@ -59,24 +59,20 @@
   }
 }
 
-.main-footer__developer:hover {
-  .main-footer__developer-text {
-    color: @accent;
-  }
-
-  .main-footer__developer-icon {
-    fill: @accent;
-  }
+.main-footer__developer:hover .main-footer__developer-text {
+  color: @accent;
 }
 
-.main-footer__developer:active {
-  .main-footer__developer-text {
-    color: @gray-academy;
-  }
+.main-footer__developer:hover .main-footer__developer-icon {
+  fill: @accent;
+}
 
-  .main-footer__developer-icon {
-    fill: @gray-academy;
-  }
+.main-footer__developer:active .main-footer__developer-text {
+  color: @gray-academy;
+}
+
+.main-footer__developer:active .main-footer__developer-icon {
+  fill: @gray-academy;
 }
 
 .main-footer__developer-icon {

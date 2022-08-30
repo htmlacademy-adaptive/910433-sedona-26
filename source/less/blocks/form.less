@@ -109,10 +109,6 @@
   display: block;
   margin-bottom: 16px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   &:hover {
     .form__radio-marker,
     .form__checkbox-marker {
@@ -126,6 +122,10 @@
       background-color: @gray-active;
     }
   }
+}
+
+.form__fieldset:last-child {
+  margin-bottom: 0;
 }
 
 .form__input-field {

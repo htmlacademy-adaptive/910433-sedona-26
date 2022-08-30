@@ -18,15 +18,20 @@
   @media @tablet-screen {
     margin-top: 0;
     height: 518px;
-    background-image: url("../img/back-desktop@2x.jpg");
+    background-image: url("../img/back-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/back-desktop@2x.jpg");
+      background-image: url("../img/back-tablet@2x.jpg");
     }
   }
 
   @media @desktop-screen {
     height: 517px;
+    background-image: url("../img/back-desktop@2x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
   }
 
   &::after {
@@ -36,7 +41,7 @@
     left: 0;
     height: 57px;
     width: 100%;
-    background-image: url("../img/icons/hero-triangle.svg");
+    background-image: url("../img/hero-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -50,25 +55,18 @@
   align-items: center;
   justify-content: center;
   background-color: @accent-down;
-  background-image: url("../img/back-mobile@1x.jpg");
+  background-image: url("../img/hero-small-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/back-mobile@2x.jpg");
-  }
-
-  .catalog-hero__image,
-  .form-hero__image {
-    @media @tablet-screen {
-      width: 461px;
-      height: auto;
-    }
+    background-image: url("../img/hero-small-mobile@2x.jpg");
   }
 
   @media @tablet-screen {
+    margin-top: 0;
     height: 290px;
     background-position: center bottom;
     background-image: url("../img/hero-small-tablet@1x.jpg");
@@ -96,7 +94,7 @@
     width: 100%;
     bottom: -1px;
     left: 0;
-    background-image: url("../img/icons/hero-triangle.svg");
+    background-image: url("../img/hero-triangle.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;

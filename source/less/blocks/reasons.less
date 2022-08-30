@@ -9,7 +9,7 @@
     left: 0;
     height: 37px;
     width: 100%;
-    background-image: url("../img/description-decor-0.png");
+    background-image: url("../img/description-triangle.svg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto;
@@ -37,67 +37,59 @@
   padding: 26px 0 0;
   background-color: @gray-reasons;
 
-  &:nth-child(3) {
-    .reasons__item-text {
-      margin-bottom: 12px;
-    }
-
-    .reasons__item-title {
-      @media @tablet-screen {
-        margin-top: 4px;
-      }
-    }
-  }
-
-  br {
-    display: none;
-  }
-
   @media @tablet-screen {
     border-bottom: none;
     display: flex;
     justify-content: center;
     padding: 42px 0;
+  }
 
-    br {
+  br {
+    display: none;
+
+    @media @tablet-screen {
       display: block;
     }
   }
+}
 
-  &:first-child {
-    padding-top: 70px;
-
-    @media @tablet-screen {
-      padding-top: 0;
-    }
+.reasons__item .reasons__item-title {
+  @media @tablet-screen {
+    margin-top: 4px;
   }
+}
 
-  &:nth-child(4) {
-    @media @tablet-screen {
-      .reasons__item-text {
-        max-width: 190px;
-      }
-    }
+.reasons__item:first-child {
+  padding-top: 70px;
+
+  @media @tablet-screen {
+    padding-top: 0;
   }
+}
 
-  &:nth-child(5) {
-    @media @tablet-screen {
-      .reasons__item-text {
-        max-width: 157px;
-      }
-    }
-  }
+.reasons__item:nth-child(3) .reasons__item-text {
+  margin-bottom: 12px;
+}
 
-  &:last-child {
+.reasons__item:nth-child(4) {
+  @media @tablet-screen {
     .reasons__item-text {
-      border-bottom: none;
+      max-width: 190px;
     }
+  }
+}
 
-    @media @tablet-screen {
-      .reasons__item-text {
-        max-width: 175px;
-      }
-    }
+.reasons__item:nth-child(5) .reasons__item-text {
+  @media @tablet-screen {
+    max-width: 157px;
+  }
+}
+
+.reasons__item:last-child .reasons__item-text {
+  border-bottom: none;
+
+  @media @tablet-screen {
+    max-width: 175px;
   }
 }
 
@@ -203,72 +195,73 @@
     display: flex;
     grid-column: span 3;
     padding-top: 0;
+  }
 
-    &:nth-child(3) {
+  &--reverse {
+    @media @tablet-screen {
       display: flex;
       flex-direction: row-reverse;
     }
   }
+}
 
-  .reasons__item-image {
-    @media @tablet-screen {
-      box-sizing: border-box;
-      // width: 66.67%;
-      width: 100%;
-      object-fit: cover;
-    }
+.reasons__item-illustrated .reasons__item-image {
+  @media @tablet-screen {
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.reasons__item-illustrated .reasons__item-info {
+  padding: 0 18px;
+
+  @media @tablet-screen {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 33.33%;
+    padding: 40px 32px 44px;
   }
 
-  .reasons__item-info {
-    padding: 0 18px;
+  @media @desktop-screen {
+    padding: 47px 65px;
+  }
+}
 
-    @media @tablet-screen {
-      display: block;
-      text-align: center;
-      box-sizing: border-box;
-      width: 33.33%;
-      padding: 40px 32px 44px;
-    }
+.reasons__item-illustrated .reasons__item-title {
+  color: @white;
 
-    @media @desktop-screen {
-      padding: 47px 65px;
-    }
+  @media @tablet-screen {
+    margin-bottom: 13px;
+  }
+}
+
+.reasons__item-illustrated .reasons__item-number,
+.reasons__item-illustrated .reasons__item-text {
+  color: @white;
+
+  @media @desktop-screen {
+    margin-bottom: 13px;
+  }
+}
+
+.reasons__item-illustrated .reasons__item-number {
+  @media @tablet-screen {
+    margin-bottom: 22px;
   }
 
-  .reasons__item-title {
-    color: @white;
-
-    @media @tablet-screen {
-      margin-bottom: 13px;
-    }
+  &::before,
+  &::after {
+    background-color: @white;
   }
+}
 
-  .reasons__item-number,
-  .reasons__item-text {
-    color: @white;
+.reasons__item-illustrated .reasons__item-text {
+  margin-bottom: 17px;
+  border: none;
 
-    @media @desktop-screen {
-      margin-bottom: 13px;
-    }
-  }
-
-  .reasons__item-number {
-    @media @tablet-screen {
-      margin-bottom: 22px;
-    }
-
-    &::before,
-    &::after {
-      background-color: @white;
-    }
-  }
-
-  .reasons__item-text {
-    margin-bottom: 17px;
-    border: none;
-
-    @media @tablet-screen {
-      margin-bottom: 0;
-    }
+  @media @tablet-screen {
+    margin-bottom: 0;
   }
 }

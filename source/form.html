@@ -19,43 +19,43 @@
 <body class="page-body">
   <div class="page-body__wrapper">
     <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <span class="visually-hidden">Город Седона</span>
-      <svg class="main-header__logo-image" width="185" height="96">
-        <use xlink:href="./img/sprite.svg#logo"></use>
-      </svg>
-    </a>
-    <nav class="main-nav main-nav--no-js">
-      <button class="main-nav__toggle">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <div class="main-nav__lists">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Фото и видео</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
-            </li>
-          </ul>
+      <a class="main-header__logo" href="index.html">
+        <span class="visually-hidden">Город Седона</span>
+        <svg class="main-header__logo-image" width="185" height="96">
+          <use xlink:href="./img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="main-header__nav main-header__nav--no-js main-nav">
+        <button class="main-header__toggle main-nav__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <div class="main-nav__lists main-header__lists">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--active" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      <div class="main-header__hero main-header__hero--small hero hero--small">
+        <h1 class="visually-hidden">Добро пожаловать в Седону — городок в Аризоне</h1>
+        <svg class="hero__image hero__image--small" width="229" height="39">
+          <use xlink:href="./img/sprite.svg#heading-secondary"></use>
+        </svg>
       </div>
-    </nav>
-    <div class="hero hero--small">
-      <h1 class="visually-hidden">Добро пожаловать в Седону — городок в Аризоне</h1>
-      <svg class="hero__image hero__image--small" width="229" height="39">
-        <use xlink:href="./img/sprite.svg#heading-secondary"></use>
-      </svg>
-    </div>
     </header>
     <main>
     <section class="page-subject page-subject--form">
@@ -68,7 +68,7 @@
     <form class="form" action="#" method="GET">
       <div class="form__wrapper">
         <div class="form__section form-introduction">
-          <h3 class="form__section-title title">Представьтесь:</h3>
+          <h3 class="form-introduction__title form__section-title title">Представьтесь:</h3>
           <label class="form-introduction__first-name form__fieldset">
             <span class="form__input-text text">Имя*:</span>
             <input class="form__input-field" id="firstName" type="text" placeholder="Пётр">
@@ -96,17 +96,17 @@
         </div>
 
         <div class="form__section form-impression">
-          <h3 class="form__section-title title">Ваше общее впечатление:</h3>
+          <h3 class="form-impression__title form__section-title title">Ваше общее впечатление:</h3>
           <div class="form-impression__buttons-wrapper">
-            <label class="form-impression__positive form__fieldset">
+            <label class="form-impression__positive form-impression__fieldset form__fieldset">
               <input class="form__input-radio" type="radio" name="impression" checked>
               <span class="form__radio-text">Скорее положительное</span>
             </label>
-            <label class="form-impression__negative form__fieldset">
+            <label class="form-impression__negative form-impression__fieldset form__fieldset">
               <input class="form__input-radio" type="radio" name="impression">
               <span class="form__radio-text">Скорее отрицательное</span>
             </label>
-            <label class="form-impression__unknown form__fieldset">
+            <label class="form-impression__unknown form-impression__fieldset form__fieldset">
               <input class="form__input-radio" type="radio" name="impression" disabled>
               <span class="form__radio-text">Затрудняюсь ответить</span>
             </label>
@@ -114,21 +114,21 @@
         </div>
 
         <div class="form__section form-visited">
-          <h3 class="form__section-title title">Посещенные<br>достопримечательности:</h3>
+          <h3 class="form-visited__title form__section-title title">Посещенные<br>достопримечательности:</h3>
           <div class="form-visited__buttons-wrapper">
-            <label class="form-visited__bridge form__fieldset">
+            <label class="form-visited__fieldset form__fieldset">
               <input class="form__input-checkbox" type="checkbox" checked>
               <span class="form__checkbox-text">Мост Дьявола</span>
             </label>
-            <label class="form-visited__bell-mountain form__fieldset">
+            <label class="form-visited__fieldset form__fieldset">
               <input class="form__input-checkbox" type="checkbox" checked>
               <span class="form__checkbox-text">Гора-Колокол</span>
             </label>
-            <label class="form-visited__park form__fieldset">
+            <label class="form-visited__fieldset form__fieldset">
               <input class="form__input-checkbox" type="checkbox">
               <span class="form__checkbox-text">Слайд-парк</span>
             </label>
-            <label class="form-visited__red-mountains form__fieldset">
+            <label class="form-visited__fieldset form__fieldset">
               <input class="form__input-checkbox" type="checkbox" disabled>
               <span class="form__checkbox-text">Красные скалы</span>
             </label>

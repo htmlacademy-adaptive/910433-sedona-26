@@ -154,27 +154,6 @@
   }
 }
 
-.main-nav__list:last-child .main-nav__item:last-child .main-nav__link {
-  position: relative;
-
-  @media @tablet-screen {
-    &::after {
-      display: none;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 7px;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-    cursor: pointer;
-  }
-}
-
 .main-nav__item {
   padding: 0;
 
@@ -230,6 +209,27 @@
 
     @media @tablet-screen {
       color: @navlink-active;
+    }
+  }
+
+  &--shaded {
+    position: relative;
+
+    @media @tablet-screen {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 7px;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      cursor: pointer;
     }
   }
 }

@@ -17,16 +17,12 @@
 
 .advices__list {
   list-style: none;
-  padding: 0 18px 52px;
+  padding: 0 18px 51px;
 
   @media @tablet-screen {
     padding: 0;
     display: flex;
     justify-content: space-between;
-  }
-
-  @media @desktop-screen {
-    // margin-top: -20px;
   }
 }
 
@@ -34,7 +30,7 @@
   text-align: left;
   padding-left: 47px;
   padding-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   position: relative;
 
   @media @tablet-screen {
@@ -95,6 +91,16 @@
 
   @media @tablet-screen {
     padding-left: 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media @desktop-screen {
+    br {
+      display: block;
+    }
   }
 
   &::before {

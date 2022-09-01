@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="./fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="./fonts/ptsans.woff" as="font">
-  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font">
-  <link rel="preload" href="./fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff" as="font" type="font/woff" crossorigin>
   <title>Седона - Форма</title>
 </head>
 
@@ -26,28 +26,24 @@
         </svg>
       </a>
       <nav class="main-header__nav main-header__nav--no-js main-nav">
-        <button class="main-header__toggle main-nav__toggle">
+        <button class="main-header__toggle main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <div class="main-nav__lists main-header__lists">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Фото и видео</a>
-              </li>
-            </ul>
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--active" href="form.html">Форма отзыва</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--shaded" href="https://htmlacademy.ru/">HTML academy</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-header__list main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class="main-header__hero main-header__hero--small hero hero--small">
@@ -58,95 +54,94 @@
       </div>
     </header>
     <main>
-    <section class="page-subject page-subject--form">
-      <div class="page-subject__wrapper">
-        <h2 class="page-subject__title page-subject__form-title title title--big">Оставьте свой отзыв</h2>
-        <p class="page-subject__text text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </div>
-    </section>
-
-    <form class="form" action="#" method="GET">
-      <div class="form__wrapper">
-        <div class="form__section form-introduction">
-          <h3 class="form-introduction__title form__section-title title">Представьтесь:</h3>
-          <label class="form-introduction__first-name form__fieldset">
-            <span class="form__input-text text">Имя*:</span>
-            <input class="form__input-field" id="firstName" type="text" placeholder="Пётр">
-          </label>
-          <label class="form-introduction__second-name form__fieldset">
-            <span class="form__input-text text">Фамилия*:</span>
-            <input class="form__input-field" id="secondName" type="text" placeholder="Петров">
-          </label>
-          <label class="form-introduction__third-name form__fieldset">
-            <span class="form__input-text text">Отчество:</span>
-            <input class="form__input-field" id="thirdName" type="text" placeholder="Петрович">
-          </label>
+      <section class="page-subject page-subject--form">
+        <div class="page-subject__wrapper">
+          <h2 class="page-subject__title page-subject__form-title title title--big">Оставьте свой отзыв</h2>
+          <p class="page-subject__text text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
-
-        <div class="form__section form-contacts">
-          <h3 class="form__section-title form-contacts__title title">Контактная информация:</h3>
-          <label class="form-contacts__phone form__fieldset">
-            <span class="form__input-text text">Контактный телефон*:</span>
-            <input class="form__input-field" id="phone" type="tel" placeholder="Введите телефон">
-          </label>
-          <label class="form-contacts__email form__fieldset">
-            <span class="form__input-text text">Электронная почта*:</span>
-            <input class="form__input-field" id="email" type="email" placeholder="Введите e-mail">
-          </label>
-        </div>
-
-        <div class="form__section form-impression">
-          <h3 class="form-impression__title form__section-title title">Ваше общее впечатление:</h3>
-          <div class="form-impression__buttons-wrapper">
-            <label class="form-impression__positive form-impression__fieldset form__fieldset">
-              <input class="form__input-radio" type="radio" name="impression" checked>
-              <span class="form__radio-text">Скорее положительное</span>
+      </section>
+      <form class="form" action="#" method="GET">
+        <div class="form__wrapper">
+          <div class="form__section form-introduction">
+            <h3 class="form-introduction__title form__section-title title">Представьтесь:</h3>
+            <label class="form-introduction__first-name form__fieldset">
+              <span class="form__input-text text">Имя*:</span>
+              <input class="form__input-field" id="firstName" type="text" placeholder="Пётр">
             </label>
-            <label class="form-impression__negative form-impression__fieldset form__fieldset">
-              <input class="form__input-radio" type="radio" name="impression">
-              <span class="form__radio-text">Скорее отрицательное</span>
+            <label class="form-introduction__second-name form__fieldset">
+              <span class="form__input-text text">Фамилия*:</span>
+              <input class="form__input-field" id="secondName" type="text" placeholder="Петров">
             </label>
-            <label class="form-impression__unknown form-impression__fieldset form__fieldset">
-              <input class="form__input-radio" type="radio" name="impression" disabled>
-              <span class="form__radio-text">Затрудняюсь ответить</span>
+            <label class="form-introduction__third-name form__fieldset">
+              <span class="form__input-text text">Отчество:</span>
+              <input class="form__input-field" id="thirdName" type="text" placeholder="Петрович">
             </label>
           </div>
-        </div>
 
-        <div class="form__section form-visited">
-          <h3 class="form-visited__title form__section-title title">Посещенные<br>достопримечательности:</h3>
-          <div class="form-visited__buttons-wrapper">
-            <label class="form-visited__fieldset form__fieldset">
-              <input class="form__input-checkbox" type="checkbox" checked>
-              <span class="form__checkbox-text">Мост Дьявола</span>
+          <div class="form__section form-contacts">
+            <h3 class="form__section-title form-contacts__title title">Контактная информация:</h3>
+            <label class="form-contacts__phone form__fieldset">
+              <span class="form__input-text text">Контактный телефон*:</span>
+              <input class="form__input-field" id="phone" type="tel" placeholder="Введите телефон">
             </label>
-            <label class="form-visited__fieldset form__fieldset">
-              <input class="form__input-checkbox" type="checkbox" checked>
-              <span class="form__checkbox-text">Гора-Колокол</span>
-            </label>
-            <label class="form-visited__fieldset form__fieldset">
-              <input class="form__input-checkbox" type="checkbox">
-              <span class="form__checkbox-text">Слайд-парк</span>
-            </label>
-            <label class="form-visited__fieldset form__fieldset">
-              <input class="form__input-checkbox" type="checkbox" disabled>
-              <span class="form__checkbox-text">Красные скалы</span>
+            <label class="form-contacts__email form__fieldset">
+              <span class="form__input-text text">Электронная почта*:</span>
+              <input class="form__input-field" id="email" type="email" placeholder="Введите e-mail">
             </label>
           </div>
-        </div>
 
-        <div class="form__section form-emotions">
-          <h3 class="form-emotions__title form__section-title title">Опишите свои эмоции:</h3>
-          <div class="form-emotions__wrapper">
-            <textarea class="form-emotions__textarea" id="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
-            <div class="form__button-box">
-              <button class="form-emotions__button form__button button" type="submit">Отправить отзыв</button>
-              <small class="form__legend">* — обязательные поля</small>
+          <div class="form__section form-impression">
+            <h3 class="form-impression__title form__section-title title">Ваше общее впечатление:</h3>
+            <div class="form-impression__buttons-wrapper">
+              <label class="form-impression__positive form-impression__fieldset form__fieldset">
+                <input class="form__input-radio" type="radio" name="impression" checked>
+                <span class="form__radio-text">Скорее положительное</span>
+              </label>
+              <label class="form-impression__negative form-impression__fieldset form__fieldset">
+                <input class="form__input-radio" type="radio" name="impression">
+                <span class="form__radio-text">Скорее отрицательное</span>
+              </label>
+              <label class="form-impression__unknown form-impression__fieldset form__fieldset">
+                <input class="form__input-radio" type="radio" name="impression" disabled>
+                <span class="form__radio-text">Затрудняюсь ответить</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__section form-visited">
+            <h3 class="form-visited__title form__section-title title">Посещенные<br>достопримечательности:</h3>
+            <div class="form-visited__buttons-wrapper">
+              <label class="form-visited__fieldset form__fieldset">
+                <input class="form__input-checkbox" type="checkbox" checked>
+                <span class="form__checkbox-text">Мост Дьявола</span>
+              </label>
+              <label class="form-visited__fieldset form__fieldset">
+                <input class="form__input-checkbox" type="checkbox" checked>
+                <span class="form__checkbox-text">Гора-Колокол</span>
+              </label>
+              <label class="form-visited__fieldset form__fieldset">
+                <input class="form__input-checkbox" type="checkbox">
+                <span class="form__checkbox-text">Слайд-парк</span>
+              </label>
+              <label class="form-visited__fieldset form__fieldset">
+                <input class="form__input-checkbox" type="checkbox" disabled>
+                <span class="form__checkbox-text">Красные скалы</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__section form-emotions">
+            <h3 class="form-emotions__title form__section-title title">Опишите свои эмоции:</h3>
+            <div class="form-emotions__wrapper">
+              <textarea class="form-emotions__textarea" id="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+              <div class="form__button-box">
+                <button class="form-emotions__button form__button button" type="submit">Отправить отзыв</button>
+                <small class="form__legend">* — обязательные поля</small>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
@@ -175,7 +170,7 @@
           </div>
           <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
             <span class="main-footer__developer-text">Разработано</span>
-            <span class="visually-hidden">герб HTML Academy</span>
+            <span class="visually-hidden">логотип HTML Academy</span>
             <svg class="main-footer__developer-icon" width="36" height="36">
               <use xlink:href="./img/sprite.svg#htmlacademy"></use>
             </svg>

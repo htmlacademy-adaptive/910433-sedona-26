@@ -3,7 +3,7 @@ const pageBodyClass = document.querySelector('.page-body');
 //элементы меню
 const menuButton = document.querySelector('.main-header__toggle');
 const menu = document.querySelector('.main-nav');
-const menuList = document.querySelector('.main-header__lists');
+const menuList = document.querySelector('.main-nav__list');
 
 //элементы формы
 const form = document.querySelector('.form');
@@ -41,7 +41,7 @@ menu.classList.remove('main-header__nav--no-js');
 // открытие меню
 menuButton.addEventListener('click', () => {
   menuButton.classList.toggle('main-nav__toggle--open');
-  menuList.classList.toggle('main-nav__lists--open');
+  menuList.classList.toggle('main-nav__list--open');
 });
 
 // открытие модальных окон

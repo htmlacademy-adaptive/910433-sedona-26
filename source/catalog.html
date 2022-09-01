@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload" href="./fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="./fonts/ptsans.woff" as="font">
-  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font">
-  <link rel="preload" href="./fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff" as="font" type="font/woff" crossorigin>
   <title>Седона - Каталог</title>
 </head>
 
@@ -26,28 +26,24 @@
         </svg>
       </a>
       <nav class="main-header__nav main-header__nav--no-js main-nav">
-        <button class="main-header__toggle main-nav__toggle">
+        <button class="main-header__toggle main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <div class="main-nav__lists main-header__lists">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--active" href="catalog.html">Фото и видео</a>
-              </li>
-            </ul>
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Форма отзыва</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--shaded" href="https://htmlacademy.ru/">HTML academy</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-header__list main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class="main-header__hero main-header__hero--small hero hero--small">
@@ -61,7 +57,7 @@
     <main>
       <section class="page-subject page-subject--catalog">
         <div class="page-subject__wrapper">
-          <h2 class="page-subject__title page-subject__catalog-title title title--big">Фото и видео</h2>
+          <h2 class="page-subject__catalog-title title title--big">Фото и видео</h2>
           <p class="page-subject__text text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
       </section>
@@ -216,7 +212,7 @@
           </div>
           <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
             <span class="main-footer__developer-text">Разработано</span>
-            <span class="visually-hidden">герб HTML Academy</span>
+            <span class="visually-hidden">логотипHTML Academy</span>
             <svg class="main-footer__developer-icon" width="36" height="36">
               <use xlink:href="./img/sprite.svg#htmlacademy"></use>
             </svg>
@@ -227,3 +223,4 @@
   </div>
   <script src="./js/app.min.js"></script>
 </body>
+</html>

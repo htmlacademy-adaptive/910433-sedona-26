@@ -6,35 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff" as="font" type="font/woff" crossorigin>
   <title>Седона - Глвная</title>
 </head>
 
 <body class="page-body">
   <div class="page-body__wrapper">
     <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <svg class="main-header__logo-image" width="185" height="96" alt="Город Седона">
-        <use xlink:href="./img/sprite.svg#logo"></use>
-      </svg>
-    </a>
-    <nav class="main-nav main-nav--no-js">
-      <button class="main-nav__toggle ">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <div class="main-nav__lists ">
-          <ul class="main-nav__list">
+      <a class="main-header__logo" href="index.html">
+        <span class="visually-hidden">Город Седона</span>
+        <svg class="main-header__logo-image" width="185" height="96">
+          <use xlink:href="./img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="main-header__nav main-header__nav--no-js main-nav">
+        <button class="main-header__toggle main-nav__toggle" type="button" aria-label="Открыть меню">
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-header__list main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Фото и видео</a>
             </li>
-          </ul>
-          <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Форма отзыва</a>
             </li>
@@ -43,14 +44,13 @@
             </li>
           </ul>
         </div>
+      </nav>
+      <div class="main-header__hero hero">
+        <h1 class="visually-hidden">Добро пожаловать в Седону — городок в Аризоне</h1>
+        <svg class="hero__image" width="282" height="214">
+          <use xlink:href="./img/sprite.svg#heading"></use>
+        </svg>
       </div>
-    </nav>
-    <div class="hero">
-      <h1 class="visually-hidden">СЕДОНА — городок в Аризоне</h1>
-      <svg class="hero__image" width="282" height="214" alt="Добро пожаловать в Седону!">
-        <use xlink:href="./img/sprite.svg#heading"></use>
-      </svg>
-    </div>
     </header>
     <main class="main-container">
     <section class="description">
@@ -62,7 +62,7 @@
             <div class="reasons__item-info">
               <h3 class="reasons__item-title title">Настоящий<br>&nbsp;городок</h3>
               <p class="reasons__item-number">№1</p>
-              <p class="reasons__item-text">Седона не аттракцион&nbsp;для туристов, там течет своя&nbsp;жизнь</p>
+              <p class="reasons__item-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <div class="reasons__picture-box">
               <picture>
@@ -84,19 +84,19 @@
               </li>
               <li class="advices__item">
                 <h4 class="advices__item-title title">Еда</h4>
-                <p class="advices__item-text">Всегда заказывайте фирменный бургер,<br> Вы не разочаруетесь!</p>
+                <p class="advices__item-text">Всегда заказывайте фирменный бургер,<br>&nbsp;Вы не разочаруетесь!</p>
               </li>
               <li class="advices__item">
                 <h4 class="advices__item-title title">Сувениры</h4>
-                <p class="advices__item-text">Не только китайского, но и местного производства!</p>
+                <p class="advices__item-text">Не только китайского,<br>&nbsp;но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li class="reasons__item reasons__item-illustrated reasons__item-illustrated--reverse">
             <div class="reasons__item-info">
-              <h3 class="reasons__item-title title">Там есть<br> Мост дьявола</h3>
+              <h3 class="reasons__item-title title">Там есть<br>&nbsp;Мост дьявола</h3>
               <p class="reasons__item-number">№2</p>
-              <p class="reasons__item-text">Да, по нему можно<br> пройти! Если вы осмелитесь, конечно</p>
+              <p class="reasons__item-text">Да, по нему можно&nbsp;<br>пройти! Если вы осмелитесь, конечно</p>
             </div>
             <div class="reasons__picture-box">
               <picture>
@@ -111,21 +111,21 @@
           </li>
           <li class="reasons__item">
             <div class="reasons__item-info">
-              <h3 class="reasons__item-title title">Небольшая<br> площадь</h3>
+              <h3 class="reasons__item-title title">Небольшая<br>&nbsp;площадь</h3>
               <p class="reasons__item-number">№3</p>
               <p class="reasons__item-text">Все интересные места находятся очень близко</p>
             </div>
           </li>
           <li class="reasons__item">
             <div class="reasons__item-info">
-              <h3 class="reasons__item-title title">КРАСИВАЯ<br> ДОРОГА</h3>
+              <h3 class="reasons__item-title title">КРАСИВАЯ<br>&nbsp;ДОРОГА</h3>
               <p class="reasons__item-number">№4</p>
               <p class="reasons__item-text">Ехать в седону из Лас-Вегаса совсем <br>не скучно!</p>
             </div>
           </li>
           <li class="reasons__item">
             <div class="reasons__item-info">
-              <h3 class="reasons__item-title title">Мало <br>туристов</h3>
+              <h3 class="reasons__item-title title">Мало<br>&nbsp;туристов</h3>
               <p class="reasons__item-number">№5</p>
               <p class="reasons__item-text">Большинство едет в гранд каньон и толпится там</p>
             </div>
@@ -136,45 +136,49 @@
     <section class="interest">
       <div class="interest__wrapper">
         <h2 class="interest__title title">Заинтересовались?</h2>
-        <p class="interest__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p class="interest__text">Укажите предполагаемые даты поездки,<br>&nbsp;и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="interest__link button" href="#" target="_blank">Найти Гостиницу</a>
       </div>
     </section>
     <section class="map">
       <h3 class="visually-hidden">Контакты</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15847.771218321583!2d-111.78907729784412!3d34.8733361376179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1659454891255!5m2!1sru!2sru" width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13094.246790015919!2d-111.81418925943967!3d34.86723898627163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da1210f557b73%3A0x91a7e7cf2aa0a9da!2z0JfQsNC_0LDQtCDQodC10LTQvtC90LAsINCh0LXQtNC-0L3QsCwg0JDRgNC40LfQvtC90LAgODYzMzYsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1661939262965!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     </main>
     <footer class="main-footer">
-    <div class="main-footer__wrapper">
-      <div class="main-footer__content">
-        <a class="main-footer__hashtag" href="#">#visitsedona</a>
-        <div class="main-footer__social social">
-          <h2 class="visually-hidden">Мы в социальных сетях:</h2>
-          <a class="social__link social--vk" href="https://vk.com/htmlacademy">
-            <svg class="social__vk-icon" width="24" height="24" alt="наша страница в ВКонтакте">
-              <use xlink:href="./img/sprite.svg#vk"></use>
-            </svg>
-          </a>
-          <a class="social__link social--telegram" href="https://t.me/htmlacademy">
-            <svg class="social__telegram-icon" width="24" height="24" alt="наш канал в telegram">
-              <use xlink:href="./img/sprite.svg#telegram"></use>
-            </svg>
-          </a>
-          <a class="social__link social--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <svg class="social__youtube-icon" width="24" height="24" alt="наш канал на youtube">
-              <use xlink:href="./img/sprite.svg#youtube"></use>
+      <div class="main-footer__wrapper">
+        <div class="main-footer__content">
+          <a class="main-footer__hashtag" href="#">#visitsedona</a>
+          <div class="main-footer__social social">
+            <h2 class="visually-hidden">Мы в социальных сетях:</h2>
+            <a class="social__link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">наша страница в ВКонтакте</span>
+              <svg class="social__vk-icon" width="24" height="24">
+                <use xlink:href="./img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">наш канал в telegram</span>
+              <svg class="social__telegram-icon" width="24" height="24">
+                <use xlink:href="./img/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">наш канал на youtube</span>
+              <svg class="social__youtube-icon" width="24" height="24">
+                <use xlink:href="./img/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </div>
+          <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
+            <span class="main-footer__developer-text">Разработано</span>
+            <span class="visually-hidden">логотип HTML Academy</span>
+            <svg class="main-footer__developer-icon" width="36" height="36">
+              <use xlink:href="./img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>
-        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
-          <span class="main-footer__developer-text">Разработано</span>
-          <svg class="main-footer__developer-icon" width="36" height="36" alt="герб HTML Academy">
-            <use xlink:href="./img/sprite.svg#htmlacademy"></use>
-          </svg>
-        </a>
       </div>
-    </div>
     </footer>
   </div>
   <script src="./js/app.min.js"></script>

@@ -3,25 +3,27 @@
   background-color: @white;
 
   @media @tablet-screen {
+    box-sizing: border-box;
     grid-column: span 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 61px 0 60px;
+  }
+
+  @media @desktop-screen {
+    padding: 61px 0 81px;
   }
 }
 
 .advices__list {
   list-style: none;
-  padding: 0 18px 52px;
+  padding: 0 18px 51px;
 
   @media @tablet-screen {
     padding: 0;
     display: flex;
     justify-content: space-between;
-  }
-
-  @media @desktop-screen {
-    margin-top: -20px;
   }
 }
 
@@ -29,10 +31,13 @@
   text-align: left;
   padding-left: 47px;
   padding-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   position: relative;
 
   @media @tablet-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding-top: 97px;
     margin-bottom: 0;
@@ -53,7 +58,7 @@
     @media @tablet-screen {
       width: 75px;
       height: 75px;
-      top: -3px;
+      top: 0;
       left: 50%;
       margin-left: -37.5px;
     }
@@ -64,7 +69,8 @@
   padding-left: 47px;
 
   @media @tablet-screen {
-    padding-left: 0;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   &::before {
@@ -76,7 +82,8 @@
   padding-left: 52px;
 
   @media @tablet-screen {
-    padding-left: 0;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   &::before {
@@ -89,12 +96,30 @@
   padding-left: 45px;
 
   @media @tablet-screen {
-    padding-left: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media @desktop-screen {
+    br {
+      display: block;
+    }
   }
 
   &::before {
     background-image: url("../img/present.svg");
     background-size: cover;
+
+    @media @tablet-screen {
+      margin-left: -41px;
+      width: 80px;
+      height: 80px;
+      top: -5px;
+    }
   }
 }
 
@@ -106,9 +131,9 @@
   line-height: 144%;
   text-transform: uppercase;
   color: @black;
+  width: 100%;
 
   @media @tablet-screen {
-    max-width: 185px;
     margin: 0 auto 23px;
     font-size: 21px;
     line-height: 124%;

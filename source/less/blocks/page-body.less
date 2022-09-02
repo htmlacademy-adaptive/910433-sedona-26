@@ -1,6 +1,10 @@
 .page-body {
   margin: 0;
-  background-color: @page-bg;
+  background: @white;
+
+  @media @tablet-screen {
+    background-color: @page-bg;
+  }
 
   &--no-scroll {
     overflow-y: hidden;

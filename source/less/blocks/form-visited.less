@@ -12,8 +12,8 @@
   }
 }
 
-.form-visited .form__section-title {
-  margin-bottom: 19px;
+.form-visited__title {
+  margin-bottom: 20px;
 
   @media @tablet-screen {
     margin-bottom: 30px;
@@ -21,6 +21,10 @@
 
   @media @desktop-screen {
     margin-bottom: 61px;
+  }
+
+  br {
+    display: block;
   }
 }
 
@@ -39,7 +43,7 @@
   }
 }
 
-.form-visited__buttons-wrapper .form__fieldset {
+.form-visited__fieldset {
   @media @tablet-screen {
     width: 46%;
   }
@@ -49,8 +53,12 @@
   }
 }
 
-.form-visited__buttons-wrapper .form__fieldset:nth-child(2n) {
+.form-visited__fieldset:nth-child(2n) {
   @media @tablet-screen {
     margin-left: 35px;
+  }
+
+  @media @desktop-screen {
+    margin-left: 0;
   }
 }

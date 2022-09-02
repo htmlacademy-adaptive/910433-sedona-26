@@ -4,11 +4,11 @@
   background-color: @white;
 
   @media @tablet-screen {
-    padding: 61px 0 58px;
+    padding: 60px 0 58px;
   }
 
   @media @desktop-screen {
-    padding: 59px 0 67px;
+    padding: 61px 0 67px;
   }
 }
 
@@ -18,9 +18,8 @@
 
 .interest__title {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 19px;
   max-width: 260px;
-  margin-bottom: 18px;
   font-weight: 700;
   font-size: 21px;
   line-height: 124%;
@@ -30,6 +29,7 @@
     font-size: 30px;
     line-height: 87%;
     margin-bottom: 31px;
+    max-width: 100%;
   }
 }
 
@@ -49,12 +49,16 @@
   }
 
   @media @tablet-screen {
-    max-width: 435px;
+    max-width: 440px;
     margin-bottom: 42px;
+
+    br {
+      display: block;
+    }
   }
 
   @media @desktop-screen {
-    margin-bottom: 48px;
+    margin-bottom: 47px;
   }
 }
 

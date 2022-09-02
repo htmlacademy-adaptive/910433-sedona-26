@@ -21,3 +21,36 @@
 .main-header__logo-image {
   vertical-align: top;
 }
+
+.main-header__nav.main-header__nav--no-js {
+  position: static;
+  padding-top: 96px;
+  background-color: @accent;
+
+  @media @tablet-screen {
+    background-color: @white;
+    padding-top: 0;
+  }
+}
+
+.main-header__nav--no-js .main-header__toggle {
+  display: none;
+}
+
+.main-header__nav--no-js + .main-header__hero,
+.main-header__nav--no-js + .main-header__hero--small {
+  margin-top: 0;
+}
+
+.main-header__nav--no-js .main-header__list {
+  position: static;
+  display: block;
+  top: 96px;
+
+  @media @tablet-screen {
+    max-width: 1200px;
+    display: flex;
+    position: absolute;
+    top: 0;
+  }
+}

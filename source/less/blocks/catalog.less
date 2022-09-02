@@ -58,7 +58,7 @@
   }
 }
 
-.catalog__item:first-child .catalog__link .catalog__item-image {
+.catalog__item:first-child .catalog__item-image {
   @media @tablet-screen {
     height: 400px;
   }
@@ -122,16 +122,20 @@
   }
 }
 
+.catalog__item-likes {
+  flex-shrink: 0;
+}
+
 .catalog__item-button {
   display: inline-block;
   cursor: pointer;
   width: 23px;
   height: 21px;
-  margin-right: 10px;
+  margin-right: 14px;
 
   @media @tablet-screen {
     margin-top: 4px;
-    margin-right: 4px;
+    margin-right: 8px;
   }
 }
 

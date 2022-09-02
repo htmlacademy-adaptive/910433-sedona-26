@@ -1,17 +1,25 @@
 .map {
   background-color: @white;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 
   @media @tablet-screen {
     padding-bottom: 3px;
   }
 
   @media @desktop-screen {
-    padding-bottom: 4px;
+    padding-bottom: 2px;
   }
 }
 
 .map__image {
   width: 100%;
-  height: auto;
+  height: 350px;
+  background-image: url("../img/map-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-bg@2x.jpg");
+  }
 }

@@ -40,7 +40,7 @@
     border-bottom: none;
     display: flex;
     justify-content: center;
-    padding: 38px 0 16px;
+    padding: 38px 0 15px;
   }
 
   @media @desktop-screen {
@@ -58,7 +58,7 @@
 
 .reasons__item .reasons__item-title {
   @media @tablet-screen {
-    margin-top: 4px;
+    margin-top: 5px;
   }
 
   @media @desktop-screen {
@@ -222,9 +222,11 @@
 
 .reasons__item-illustrated .reasons__item-image {
   @media @tablet-screen {
-    box-sizing: border-box;
+    display: block;
+    height: 100%;
     width: 100%;
     object-fit: cover;
+    box-sizing: border-box;
   }
 }
 
@@ -232,10 +234,10 @@
   padding: 0 18px;
 
   @media @tablet-screen {
-    // display: block;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     text-align: center;
     box-sizing: border-box;
     width: 33.33%;
@@ -244,6 +246,14 @@
 
   @media @desktop-screen {
     padding: 48px 65px;
+  }
+}
+
+.reasons__item-illustrated:nth-child(1) .reasons__item-info {
+  margin-left: -4px;
+
+  @media @tablet-screen {
+    margin-left: 0;
   }
 }
 
@@ -288,6 +298,19 @@
 
   @media @desktop-screen {
     min-width: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.reasons__item-illustrated--reverse .reasons__item-title {
+  @media @tablet-screen {
+    margin-top: 5px;
+    margin-left: -7px;
+  }
+
+  @media @desktop-screen {
+    margin-top: -5px;
+    margin-left: -7px;
   }
 }
 
@@ -306,6 +329,6 @@
 .reasons__item-illustrated--reverse .reasons__item-info {
   @media @desktop-screen {
     padding-top: 52px;
-    padding-bottom: 40px;
+    padding-bottom: 38px;
   }
 }
